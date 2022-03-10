@@ -24,7 +24,6 @@ export default function SplitButton(props) {
     setOpen((prevOpen) => !prevOpen);
   };
 
-
   const handleClose = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
@@ -33,18 +32,8 @@ export default function SplitButton(props) {
     setOpen(false);
   };
 
-//   console.log(props.menuOptions);
-
-
-//   variant="contained"
-//   color="secondary"
-//   key={i}
-//   children={btn}
-
   return (
     <React.Fragment>
-      {/* <ButtonGroup 
-      > */}
       <Button
         onClick={handleToggle}
         variant={props.variant}
@@ -52,26 +41,18 @@ export default function SplitButton(props) {
         // children={props.children}
         ref={anchorRef}
         aria-label="split button"
+        sx={{ zIndex: "10"}}
       >
         {props.title}
       </Button>
-      {/* <Button
-          size="small"
-          aria-controls={open ? 'split-button-menu' : undefined}
-          aria-expanded={open ? 'true' : undefined}
-          aria-label="select merge strategy"
-          aria-haspopup="menu"
-          onClick={handleToggle}
-        >
-          <ArrowDropDownIcon />
-        </Button> */}
-      {/* </ButtonGroup> */}
+
       <Popper
         open={open}
         anchorEl={anchorRef.current}
         role={undefined}
         transition
         disablePortal
+        style={{ zIndex: 11 }}
       >
         {({ TransitionProps, placement }) => (
           <Grow
@@ -81,9 +62,9 @@ export default function SplitButton(props) {
                 placement === "bottom" ? "center top" : "center bottom",
             }}
           >
-            <Paper>
+            <Paper >
               <ClickAwayListener onClickAway={handleClose}>
-                <MenuList id="split-button-menu">
+                <MenuList  id="split-button-menu">
                   {props.menuOptions.map((option, index) => (
                     <MenuItem
                       key={option}

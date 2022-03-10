@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -9,16 +9,10 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Slide from "@mui/material/Slide";
 import capWords from "../components/capWords";
-import { Button, ButtonGroup } from "@mui/material";
+import { Button, ButtonGroup, Modal } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import { PhoneCallback } from "@mui/icons-material";
+import { Close, Menu, PhoneCallback } from "@mui/icons-material";
 import SplitButton from "./splitButton";
-
-const options = [
-  "Create a merge commit",
-  "Squash and merge",
-  "Rebase and merfdsfdsge",
-];
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -43,54 +37,6 @@ HideOnScroll.propTypes = {
    * You won't need it on your project.
    */
   window: PropTypes.func,
-};
-
-const buttonsTitle = [
-  "get started",
-  "services",
-  "resolved cases",
-  "resources",
-  "about us",
-  "clients",
-];
-
-const buttonsTitleObj = {
-  name: [
-    "get started",
-    "services",
-    "resolved cases",
-    "resources",
-    "about us",
-    "clients",
-  ],
-  menuItems: {
-    "get started": [],
-    services: [
-      "Free Tax Consultation",
-      "IRS Fresh Start Program",
-      "Tax Resolution",
-      "Tax Preparation",
-      "Back Taxes",
-      "Unfiled Taxes",
-    ],
-    "resolved cases": ["Success Stores", "Tax Company Reviews"],
-    resources: [
-      "Frequently Asked Questions",
-      "Common IRS Notices",
-      "Legitimate Tax Relief",
-      "When You Need a Tax Attorney",
-      "Tax Liabilities and Bankruptcy",
-      "Tax Blog & News",
-    ],
-    "about us": [
-      "Our Team",
-      "Our Accreditation",
-      "Our Guarantees",
-      "Careers",
-      "Contact Us",
-    ],
-    clients: [],
-  },
 };
 
 const objButton = [
@@ -140,6 +86,25 @@ const objButton = [
   },
 ];
 
+const style = {
+  position: "absolute",
+  top: "5vh",
+  left: "5vw",
+  width: "90vw",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-end",
+  gap: 1,
+  overflow: "scroll",
+
+  // transform: "translate(-50%, -50%)",
+  // width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
 objButton.map((btn) => {
   console.log(btn.menuTitle);
 });
@@ -154,9 +119,13 @@ objButton.map((btn) => {
 //   );
 // })
 
-const newButtonsTitle = capWords(buttonsTitle);
-
 function Header(props) {
+  const [open, setOpen] = useState(false);
+
+  const activateModal = () => {
+    !open ? setOpen(true) : setOpen(false);
+  };
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -172,7 +141,74 @@ function Header(props) {
               Tax Company
             </Typography>
 
-            <ButtonGroup spacing={2} sx={{ gap: 2 }}>
+            <Box
+              onClick={() => {
+                activateModal();
+              }}
+            >
+              {!open ? (
+                <Menu sx={{ display: { xs: "block", md: "none" } }} />
+              ) : (
+                <Close sx={{ display: { xs: "block", md: "none" } }} />
+              )}
+            </Box>
+
+            <Modal
+              open={open}
+              onClose={activateModal}
+              aria-labelledby="Navbar"
+              aria-describedby="Navigation bar"
+              sx={{
+                overflow: "scroll",
+              }}
+            >
+              <Box sx={style}>
+                <Close
+                  onClick={() => {
+                    activateModal();
+                  }}
+                />
+                <ButtonGroup
+                  sx={{
+                    gap: 2,
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  {objButton.map((btn, i) => (
+                    <SplitButton
+                      variant={`contained`}
+                      color={"secondary"}
+                      key={i}
+                      title={`${btn.title}`}
+                      menuOptions={btn.menuTitle}
+                      sx={{
+                        width: "100%",
+                      }}
+                    ></SplitButton>
+                  ))}
+
+                  <Button
+                    endIcon={<PhoneCallback />}
+                    variant="contained"
+                    color="primary"
+                  >
+                    Free Consultation
+                  </Button>
+                </ButtonGroup>
+              </Box>
+            </Modal>
+
+            <ButtonGroup
+              spacing={2}
+              sx={{
+                py: 1,
+                gap: 2,
+                display: { xs: "none", md: "inherit" },
+                flexWrap: "wrap",
+                justifyContent: "flex-end",
+              }}
+            >
               {objButton.map((btn, i) => (
                 <SplitButton
                   variant={`contained`}
@@ -182,23 +218,7 @@ function Header(props) {
                   menuOptions={btn.menuTitle}
                 ></SplitButton>
               ))}
-              {/* {objButton.map((btn, i) =>
-                i < 1 ? (
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    key={i}
-                    children={btn.title}
-                  ></Button>
-                ) : (
-                  <Button
-                    variant={"contained"}
-                    color="secondary"
-                    key={i}
-                    children={btn.title}
-                  ></Button>
-                )
-              )} */}
+
               <Button
                 endIcon={<PhoneCallback />}
                 variant="contained"

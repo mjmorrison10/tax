@@ -15,6 +15,11 @@ export default function Home() {
    <Box>
      <Button variant="contained">index.js</Button>
      <SplitButton title={"test"} options={options}/>
+     <Box sx={{
+       backgroundColor: "blue",
+       height: "100vh"
+     }}>
+     </Box>
    </Box>
   )
 }
