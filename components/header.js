@@ -13,6 +13,7 @@ import { Button, ButtonGroup, Modal } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { Close, Menu, PhoneCallback } from "@mui/icons-material";
 import SplitButton from "./splitButton";
+import Link from "next/link";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -105,9 +106,9 @@ const style = {
   p: 4,
 };
 
-objButton.map((btn) => {
-  console.log(btn.menuTitle);
-});
+// objButton.map((btn) => {
+//   console.log(btn.menuTitle);
+// });
 
 // console.log(
 //     buttonsTitleObj
@@ -137,9 +138,15 @@ function Header(props) {
               justifyContent: "space-between",
             }}
           >
-            <Typography variant="h6" component="div">
-              Tax Company
-            </Typography>
+            <Link href="/">
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ minWidth: "fit-content" }}
+              >
+                Tax Company
+              </Typography>
+            </Link>
 
             <Box
               onClick={() => {
@@ -207,6 +214,7 @@ function Header(props) {
                 display: { xs: "none", md: "inherit" },
                 flexWrap: "wrap",
                 justifyContent: "flex-end",
+                alignItems: "center",
               }}
             >
               {objButton.map((btn, i) => (
@@ -229,8 +237,12 @@ function Header(props) {
                     flexDirection: "column",
                   }}
                 >
-                  <Typography variant="caption" component="div">Free Consultation</Typography>
-                  <Typography variant="caption" component="div">(714) 555 - 1930</Typography>
+                  <Typography variant="caption" component="div">
+                    Free Consultation
+                  </Typography>
+                  <Typography variant="caption" component="div">
+                    (714) 555 - 1930
+                  </Typography>
                 </Box>
               </Button>
             </ButtonGroup>

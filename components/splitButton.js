@@ -8,14 +8,29 @@ import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
+import camWords from "./camWords";
+import Link from "next/link";
 
 export default function SplitButton(props) {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
+  let text;
+
+  const handleClick = (e) => {
+    text = e.target.innerText;
+    // console.log(camWords(text));
+
+    // console.info(`You clicked ${e.target.innerText}`);
+  };
+  // const handleClick = () => {
+  //   console.info(`You clicked ${props.menuOptions[selectedIndex]}`);
+  // };
 
   const handleMenuItemClick = (event, index) => {
-    console.log(event.target.innerText);
+    text = event.target.innerText;
+    console.log(camWords(text));
+    // console.log(event.target.innerText);
     setSelectedIndex(index);
     setOpen(false);
   };
@@ -34,17 +49,25 @@ export default function SplitButton(props) {
 
   return (
     <React.Fragment>
-      <Button
-        onClick={handleToggle}
-        variant={props.variant}
-        color={props.color}
-        // children={props.children}
-        ref={anchorRef}
-        aria-label="split button"
-        sx={{ zIndex: "10"}}
+      <Link
+        href={props.menuOptions.length === 0 ? `/${camWords(props.title)}` : ""}
       >
-        {props.title}
-      </Button>
+        <Button
+          onClick={(e) => {
+            handleToggle();
+            handleClick(e);
+          }}
+          variant={props.variant}
+          color={props.color}
+          // children={props.children}
+          ref={anchorRef}
+          aria-label="split button"
+          sx={{ zIndex: "10", height: "fit-content" }}
+          endIcon={props.menuOptions.length > 0 ? <ArrowDropDownIcon /> : null}
+        >
+          {props.title}
+        </Button>
+      </Link>
 
       <Popper
         open={open}
@@ -62,17 +85,19 @@ export default function SplitButton(props) {
                 placement === "bottom" ? "center top" : "center bottom",
             }}
           >
-            <Paper >
+            <Paper>
               <ClickAwayListener onClickAway={handleClose}>
-                <MenuList  id="split-button-menu">
+                <MenuList id="split-button-menu">
                   {props.menuOptions.map((option, index) => (
-                    <MenuItem
-                      key={option}
-                      selected={index === selectedIndex}
-                      onClick={(event) => handleMenuItemClick(event, index)}
-                    >
-                      {option}
-                    </MenuItem>
+                    <Link href={option !== undefined ? `/${camWords(option)}` : ""}>
+                      <MenuItem
+                        key={option}
+                        selected={index === selectedIndex}
+                        onClick={(event) => handleMenuItemClick(event, index)}
+                      >
+                        {option}
+                      </MenuItem>
+                    </Link>
                   ))}
                 </MenuList>
               </ClickAwayListener>
