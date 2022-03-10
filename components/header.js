@@ -142,7 +142,7 @@ function Header(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ minWidth: "fit-content" }}
+                sx={{ minWidth: "fit-content", cursor: "pointer", }}
               >
                 Tax Company
               </Typography>
