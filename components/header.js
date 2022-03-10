@@ -187,6 +187,7 @@ function Header(props) {
                       // onClick={() => {
                       //   activateModal();
                       // }}
+                      isModalOpen={open}
                       modal={activateModal}
                       variant={`contained`}
                       color={"secondary"}

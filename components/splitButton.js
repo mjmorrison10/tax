@@ -28,7 +28,7 @@ export default function SplitButton(props) {
   // };
 
   const handleMenuItemClick = (event, index) => {
-    props.modal();
+    props.isModalOpen ? props.modal() : null;
     text = event.target.innerText;
     console.log(camWords(text));
     // console.log(event.target.innerText);
@@ -38,7 +38,7 @@ export default function SplitButton(props) {
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
-    props.menuOptions.length === 0 ? props.modal() : null;
+    props.menuOptions.length === 0 && props.isModalOpen ? props.modal() : null;
   };
 
   const handleClose = (event) => {
