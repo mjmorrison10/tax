@@ -224,7 +224,14 @@ function Header(props) {
                 variant="contained"
                 color="primary"
               >
-                Free Consultation
+                <Box
+                  sx={{
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography variant="caption" component="div">Free Consultation</Typography>
+                  <Typography variant="caption" component="div">(714) 555 - 1930</Typography>
+                </Box>
               </Button>
             </ButtonGroup>
           </Toolbar>

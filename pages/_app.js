@@ -14,7 +14,7 @@ const theme = createTheme({
     },
     secondary: {
       main: blue[500],
-    }
+    },
   },
 });
 
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
       <Header />
       <Container maxWidth="xl">
-        <Box sx={{ my: {xs: 2, md: 7, lg: 2} }}>
+        <Box sx={{ my: { xs: 2, md: 9, lg: 2 } }}>
           <Component {...pageProps} />
         </Box>
       </Container>
