@@ -58,7 +58,7 @@ const objButton = [
   },
   {
     title: "resolved cases",
-    menuTitle: ["Success Stores", "Tax Company Reviews"],
+    menuTitle: ["Success Stories", "Tax Company Reviews"],
   },
   {
     title: "resources",
@@ -142,7 +142,7 @@ function Header(props) {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ minWidth: "fit-content", cursor: "pointer", }}
+                sx={{ minWidth: "fit-content", cursor: "pointer" }}
               >
                 Tax Company
               </Typography>
@@ -184,6 +184,10 @@ function Header(props) {
                 >
                   {objButton.map((btn, i) => (
                     <SplitButton
+                      // onClick={() => {
+                      //   activateModal();
+                      // }}
+                      modal={activateModal}
                       variant={`contained`}
                       color={"secondary"}
                       key={i}
@@ -195,13 +199,18 @@ function Header(props) {
                     ></SplitButton>
                   ))}
 
-                  <Button
-                    endIcon={<PhoneCallback />}
-                    variant="contained"
-                    color="primary"
-                  >
-                    Free Consultation
-                  </Button>
+                  <Link href="/apply">
+                    <Button
+                      onClick={() => {
+                        activateModal();
+                      }}
+                      endIcon={<PhoneCallback />}
+                      variant="contained"
+                      color="primary"
+                    >
+                      Free Consultation
+                    </Button>
+                  </Link>
                 </ButtonGroup>
               </Box>
             </Modal>
@@ -227,24 +236,26 @@ function Header(props) {
                 ></SplitButton>
               ))}
 
-              <Button
-                endIcon={<PhoneCallback />}
-                variant="contained"
-                color="primary"
-              >
-                <Box
-                  sx={{
-                    flexDirection: "column",
-                  }}
+              <Link href="/apply">
+                <Button
+                  endIcon={<PhoneCallback />}
+                  variant="contained"
+                  color="primary"
                 >
-                  <Typography variant="caption" component="div">
-                    Free Consultation
-                  </Typography>
-                  <Typography variant="caption" component="div">
-                    (714) 555 - 1930
-                  </Typography>
-                </Box>
-              </Button>
+                  <Box
+                    sx={{
+                      flexDirection: "column",
+                    }}
+                  >
+                    <Typography variant="caption" component="div">
+                      Free Consultation
+                    </Typography>
+                    <Typography variant="caption" component="div">
+                      (714) 555 - 1930
+                    </Typography>
+                  </Box>
+                </Button>
+              </Link>
             </ButtonGroup>
           </Toolbar>
         </AppBar>

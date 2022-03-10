@@ -28,6 +28,7 @@ export default function SplitButton(props) {
   // };
 
   const handleMenuItemClick = (event, index) => {
+    props.modal();
     text = event.target.innerText;
     console.log(camWords(text));
     // console.log(event.target.innerText);
@@ -37,6 +38,7 @@ export default function SplitButton(props) {
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
+    props.menuOptions.length === 0 ? props.modal() : null;
   };
 
   const handleClose = (event) => {
@@ -89,7 +91,12 @@ export default function SplitButton(props) {
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu">
                   {props.menuOptions.map((option, index) => (
-                    <Link key={option} href={option !== undefined ? `/menu/${camWords(option)}` : ""}>
+                    <Link
+                      key={option}
+                      href={
+                        option !== undefined ? `/menu/${camWords(option)}` : ""
+                      }
+                    >
                       <MenuItem
                         key={option}
                         selected={index === selectedIndex}
