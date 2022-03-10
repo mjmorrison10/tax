@@ -89,7 +89,7 @@ export default function SplitButton(props) {
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu">
                   {props.menuOptions.map((option, index) => (
-                    <Link href={option !== undefined ? `/${camWords(option)}` : ""}>
+                    <Link key={option} href={option !== undefined ? `/${camWords(option)}` : ""}>
                       <MenuItem
                         key={option}
                         selected={index === selectedIndex}
