@@ -49,10 +49,11 @@ export default function SplitButton(props) {
         onClick={handleToggle}
         variant={props.variant}
         color={props.color}
-        children={props.children}
+        // children={props.children}
         ref={anchorRef}
         aria-label="split button"
       >
+        {props.title}
       </Button>
       {/* <Button
           size="small"

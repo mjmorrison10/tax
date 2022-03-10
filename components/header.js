@@ -178,7 +178,7 @@ function Header(props) {
                   variant={`contained`}
                   color={"secondary"}
                   key={i}
-                  children={`${btn.title}`}
+                  title={`${btn.title}`}
                   menuOptions={btn.menuTitle}
                 ></SplitButton>
               ))}
