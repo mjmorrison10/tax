@@ -21,12 +21,14 @@ const theme = createTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <Container maxWidth="xl">
-        <Box sx={{ my: { xs: 2, md: 9, lg: 2 } }}>
-          <Component {...pageProps} />
-        </Box>
-      </Container>
+      <Box sx={{ minHeight: "100vh", backgroundColor: blue[50] }}>
+        <Header />
+        <Container maxWidth="xl">
+          <Box sx={{ my: { xs: 2, md: 9, lg: 2 } }}>
+            <Component {...pageProps} />
+          </Box>
+        </Container>
+      </Box>
     </ThemeProvider>
   );
 }
