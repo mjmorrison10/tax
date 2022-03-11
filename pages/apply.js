@@ -1,8 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
 import { blue } from "@mui/material/colors";
 import React from "react";
+import Link from "next/link";
 
-const style = {
+
+export const style = {
   backgroundColor: blue[300],
   top: "0",
   left: "0",
@@ -29,9 +31,11 @@ function apply() {
       <Typography variant="h5" component="h2" gutterBottom sx={typographyStyle}>
         Answer this short survey to learn about your tax relief options
       </Typography>
+     <Link href="/prompted">
       <Button variant="contained" size="large" color="primary">
         Get Started
       </Button>
+     </Link>
     </Box>
   );
 }
