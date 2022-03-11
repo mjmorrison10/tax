@@ -38,8 +38,18 @@ function prompted() {
     },
   };
 
+  const buttonLabels = [
+    "Received IRS notice",
+    "Garnishment, lien or levy",
+    "Unpaid taxes",
+    "Other",
+  ];
+
   return (
     <Box sx={style}>
+      {buttonLabels.map(label => {
+        <div key={label}>test</div>
+      })}
       <Box
         sx={{
           width: "100%",
@@ -100,10 +110,14 @@ function prompted() {
 
         <ButtonGroup fullWidth>
           <Link href="/apply">
-            <Button color="secondary" startIcon={<ArrowBack />} >Back</Button>
+            <Button color="secondary" startIcon={<ArrowBack />}>
+              Back
+            </Button>
           </Link>
           <Link href="/unfiledTaxes">
-            <Button color="secondary" endIcon={<ArrowForward />} >Next</Button>
+            <Button color="secondary" endIcon={<ArrowForward />}>
+              Next
+            </Button>
           </Link>
         </ButtonGroup>
       </Paper>

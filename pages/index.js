@@ -1,9 +1,16 @@
-import { Box, Button, Paper } from "@mui/material";
+import { Button, Paper, Box, Typography } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import Carousel from "react-material-ui-carousel";
 import SplitButton from "../components/splitButton";
 import styles from "../styles/Home.module.css";
+import {
+  companyName,
+  companyPhoneNumber,
+  carouselHeight,
+  carouselDotsHeight,
+} from "../public/Settings/baseSettings";
+import { blueGrey } from "@mui/material/colors";
 
 const options = [
   "Create a merge commit",
@@ -14,24 +21,38 @@ const options = [
 export default function Home(props) {
   const items = [
     {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
+      name: `Are you in need of tax relief?`,
+      description: `Let us help you. Take our 30-second survey or give us a call at ${companyPhoneNumber} to see if you qualify!`,
+      button: null,
+      image: "/images/stressed-laptop.jpg",
     },
     {
-      name: "Random Name #2",
-      description: "Hello World!",
+      name: `Get Tax Relief from the IRS`,
+      description: `Learn How ${companyName} can help you!`,
+      button: "Get Help Now",
+      image: "/images/businesss-meeting.jpg",
+    },
+    {
+      name: `Do you Qualify for Instant Tax Relief?`,
+      description: `Fill out our 30-second qualify form to find out!`,
+      button: "Qualify Now",
+      image: "/images/rejoicing.jpg",
     },
   ];
 
   return (
     <Box
-      sx={{
-        backgroundColor: "blue",
-        height: "100vh",
-        width: "100%",
-      }}
+    // sx={{
+    //   backgroundColor: "blue",
+    //   height: "100vh",
+    //   width: "100%",
+    // }}
     >
-      <Carousel>
+      <Carousel
+        sx={{
+          minHeight: `${carouselHeight}`,
+        }}
+      >
         {items.map((item, i) => (
           <Item key={i} item={item} />
         ))}
@@ -49,13 +70,46 @@ export default function Home(props) {
   );
 }
 
+const paperMbMr = 10;
+
 function Item(props) {
   return (
-    <Paper>
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
+    <Box
+      sx={{
+        minHeight: `${carouselHeight}`,
+        backgroundImage: `url(${props.item.image})`,
+        backgroundSize: "cover",
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end'
+      }}
+    >
+      <Paper
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: "fit-content",
+          height: "fit-content",
+          mb: paperMbMr,
+          mr: paperMbMr,
+          p: 2,
+          backgroundColor: "rgba(200, 200, 200, 0.4)"
+        }}
+      >
+        <Typography variant="h3" component="div">
+          {props.item.name}
+        </Typography>
+        <Typography variant="h5" component="div">
+          {props.item.description}
+        </Typography>
 
-      <Button className="CheckButton">Check it out!</Button>
-    </Paper>
+        {props.item.button && (
+          <Button variant="contained" color="secondary"
+          sx={{alignSelf: 'flex-end'}}>
+            {props.item.button}
+          </Button>
+        )}
+      </Paper>
+    </Box>
   );
 }

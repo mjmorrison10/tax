@@ -14,6 +14,7 @@ import { grey } from "@mui/material/colors";
 import { Close, Menu, PhoneCallback } from "@mui/icons-material";
 import SplitButton from "./splitButton";
 import Link from "next/link";
+import { companyName, companyPhoneNumber } from "../public/Settings/baseSettings";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -50,8 +51,8 @@ const objButton = [
     menuTitle: [
       "Free Tax Consultation",
       "IRS Fresh Start Program",
-      "Tax Resolution",
       "Tax Preparation",
+      "Tax Resolution",
       "Back Taxes",
       "Unfiled Taxes",
     ],
@@ -144,7 +145,7 @@ function Header(props) {
                 component="div"
                 sx={{ minWidth: "fit-content", cursor: "pointer" }}
               >
-                Tax Company
+                {companyName}
               </Typography>
             </Link>
 
@@ -252,7 +253,7 @@ function Header(props) {
                       Free Consultation
                     </Typography>
                     <Typography variant="caption" component="div">
-                      (714) 555 - 1930
+                      {companyPhoneNumber}
                     </Typography>
                   </Box>
                 </Button>
