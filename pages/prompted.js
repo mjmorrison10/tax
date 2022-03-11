@@ -1,11 +1,42 @@
-import { Box, Button, ButtonGroup, LinearProgress } from "@mui/material";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  LinearProgress,
+  Paper,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { style } from "./apply";
 import Link from "next/link";
-import { linearProgressHeight, linearProgressTopMd, linearProgressTopXsLg } from "../public/getStarted/ApplySettings";
+import {
+  linearProgressHeight,
+  linearProgressTopMd,
+  linearProgressTopXsLg,
+} from "../public/getStarted/ApplySettings";
+import { blue } from "@mui/material/colors";
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 function prompted() {
-  const linearProgressValue = 0
+  const linearProgressValue = 0;
+
+  const formLabelStyle = {
+    bgcolor: "primary.main",
+    alignSelf: "center",
+    width: "85%",
+    // mt: 0, pr: 2
+  };
+
+  const formCheckboxStyle = {
+    color: "secondary.main",
+    "&.Mui-checked": {
+      color: "secondary.main",
+    },
+  };
 
   return (
     <Box sx={style}>
@@ -28,14 +59,54 @@ function prompted() {
         />
       </Box>
 
-      <ButtonGroup>
-        <Link href="/apply">
-          <Button>Back</Button>
-        </Link>
-        <Link href="/unfiledTaxes">
-          <Button>Next</Button>
-        </Link>
-      </ButtonGroup>
+      <Paper
+        sx={{
+          p: 4,
+        }}
+      >
+        <Typography variant="h6" component={"h2"}>
+          What made you decide to seek tax relief?
+        </Typography>
+        <Typography
+          variant="subtitle2"
+          component={"p"}
+          sx={{ textAlign: "center" }}
+        >
+          (Select all that apply)
+        </Typography>
+
+        <FormGroup sx={{ gap: 1, my: 1 }}>
+          <FormControlLabel
+            sx={formLabelStyle}
+            control={<Checkbox sx={formCheckboxStyle} />}
+            label="Received IRS notice"
+          />
+          <FormControlLabel
+            sx={formLabelStyle}
+            control={<Checkbox sx={formCheckboxStyle} />}
+            label="Garnishment, lien or levy"
+          />
+          <FormControlLabel
+            sx={formLabelStyle}
+            control={<Checkbox sx={formCheckboxStyle} />}
+            label="Unpaid taxes"
+          />
+          <FormControlLabel
+            sx={formLabelStyle}
+            control={<Checkbox sx={formCheckboxStyle} />}
+            label="Other"
+          />
+        </FormGroup>
+
+        <ButtonGroup fullWidth>
+          <Link href="/apply">
+            <Button color="secondary" startIcon={<ArrowBack />} >Back</Button>
+          </Link>
+          <Link href="/unfiledTaxes">
+            <Button color="secondary" endIcon={<ArrowForward />} >Next</Button>
+          </Link>
+        </ButtonGroup>
+      </Paper>
     </Box>
   );
 }
