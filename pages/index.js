@@ -13,6 +13,7 @@ import {
 import { blueGrey } from "@mui/material/colors";
 import Phase from "../components/index/phase";
 import { NavigateNext } from "@mui/icons-material";
+import SkeleBar from "../components/SkeleBar";
 
 const options = [
   "Create a merge commit",
@@ -60,21 +61,14 @@ export default function Home(props) {
         ))}
       </Carousel>
 
-      <Skeleton
-        animation="wave"
-        height={8}
-        sx={{
-          mt: 2,
-        }}
-      />
+      <SkeleBar />
 
       <Box
-        minHeight={"100vh"}
+        minHeight={"80vh"}
         display={"flex"}
         flexDirection={"column"}
         alignItems={"center"}
         justifyContent={"center"}
-        backgroundColor={blueGrey[500]}
       >
         <Paper sx={{ p: 2, textAlign: "center" }}>
           <Box
@@ -147,6 +141,8 @@ export default function Home(props) {
           </Button>
         </Paper>
       </Box>
+      <SkeleBar />
+
     </Box>
   );
 }
