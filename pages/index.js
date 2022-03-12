@@ -1,4 +1,4 @@
-import { Button, Paper, Box, Typography } from "@mui/material";
+import { Button, Paper, Box, Typography, Skeleton } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import Carousel from "react-material-ui-carousel";
@@ -57,16 +57,29 @@ export default function Home(props) {
           <Item key={i} item={item} />
         ))}
       </Carousel>
+
+      <Skeleton
+        animation="wave"
+        height={8}
+        sx={{
+          mt: 2,
+        }}
+      />
+
+      <Box
+        minHeight={"100vh"}
+        display={'flex'}
+        flexDirection={"column"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        backgroundColor={blueGrey[50]}
+      >
+        <Typography>American's Best Tax Relief Company</Typography>
+        <Typography>{companyName}</Typography>
+        <Typography>2-Phase Quick Resolution Process</Typography>
+        <Box></Box>
+      </Box>
     </Box>
-    //  <Box>
-    //    <Button variant="contained">index.js</Button>
-    //    <SplitButton title={"test"} options={options}/>
-    //    <Box sx={{
-    //      backgroundColor: "blue",
-    //      height: "100vh"
-    //    }}>
-    //    </Box>
-    //  </Box>
   );
 }
 
@@ -79,33 +92,36 @@ function Item(props) {
         minHeight: `${carouselHeight}`,
         backgroundImage: `url(${props.item.image})`,
         backgroundSize: "cover",
-        display: 'flex',
-        alignItems: 'flex-end',
-        justifyContent: 'flex-end'
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
       }}
     >
       <Paper
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
+          display: "flex",
+          flexDirection: "column",
           width: "fit-content",
           height: "fit-content",
           mb: paperMbMr,
           mr: paperMbMr,
           p: 2,
-          backgroundColor: "rgba(200, 200, 200, 0.4)"
+          backgroundColor: "rgba(200, 200, 200, 0.5)",
         }}
       >
         <Typography variant="h3" component="div">
           {props.item.name}
         </Typography>
-        <Typography variant="h5" component="div">
+        <Typography variant="h5" component="div" sx={{ maxWidth: "45ch" }}>
           {props.item.description}
         </Typography>
 
         {props.item.button && (
-          <Button variant="contained" color="secondary"
-          sx={{alignSelf: 'flex-end'}}>
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{ alignSelf: "flex-end" }}
+          >
             {props.item.button}
           </Button>
         )}
