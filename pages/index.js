@@ -87,7 +87,7 @@ export default function Home(props) {
             }}
           >
             <Typography variant="caption">
-              American's Best Tax Relief Company
+              {`American's Best Tax Relief Company`}
             </Typography>
             <Typography variant="h4" component="p" fontWeight={"bold"}>
               {companyName}

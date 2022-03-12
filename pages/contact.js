@@ -9,10 +9,10 @@ function contact() {
     <Box sx={style}>
       contact
       <ButtonGroup>
-        <Link href="">
+        <Link href="" passHref>
           <Button>Back</Button>
         </Link>
-        <Link href="">
+        <Link href="" passHref>
           <Button>Next</Button>
         </Link>
       </ButtonGroup>

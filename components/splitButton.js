@@ -97,6 +97,7 @@ export default function SplitButton(props) {
                       href={
                         option !== undefined ? `/menu/${camWords(option)}` : ""
                       }
+                      passHref
                     >
                       <MenuItem
                         key={option}

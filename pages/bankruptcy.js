@@ -9,10 +9,10 @@ function bankruptcy() {
     <Box sx={style}>
       bankruptcy
       <ButtonGroup>
-        <Link href="/taxIssueTypes">
+        <Link href="/taxIssueTypes" passHref>
           <Button>Back</Button>
         </Link>
-        <Link href="/contact">
+        <Link href="/contact" passHref>
           <Button>Next</Button>
         </Link>
       </ButtonGroup>

@@ -31,7 +31,7 @@ function apply() {
       <Typography variant="h5" component="h2" gutterBottom sx={typographyStyle}>
         Answer this short survey to learn about your tax relief options
       </Typography>
-     <Link href="/prompted">
+     <Link href="/prompted" passHref>
       <Button variant="contained" size="large" color="primary">
         Get Started
       </Button>

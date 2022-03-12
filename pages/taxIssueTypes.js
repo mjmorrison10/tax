@@ -9,10 +9,10 @@ function taxIssueTypes() {
     <Box sx={style}>
       tax issues types
       <ButtonGroup>
-        <Link href="/federalOrState">
+        <Link href="/federalOrState" passHref>
           <Button>Back</Button>
         </Link>
-        <Link href="/bankruptcy">
+        <Link href="/bankruptcy" passHref>
           <Button>Next</Button>
         </Link>
       </ButtonGroup>

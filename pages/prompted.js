@@ -109,12 +109,12 @@ function prompted() {
         </FormGroup>
 
         <ButtonGroup fullWidth>
-          <Link href="/apply">
+          <Link href="/apply" passHref>
             <Button color="secondary" startIcon={<ArrowBack />}>
               Back
             </Button>
           </Link>
-          <Link href="/unfiledTaxes">
+          <Link href="/unfiledTaxes" passHref>
             <Button color="secondary" endIcon={<ArrowForward />}>
               Next
             </Button>

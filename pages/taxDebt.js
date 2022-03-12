@@ -9,10 +9,10 @@ function taxDebt() {
     <Box sx={style}>
       tax debt
       <ButtonGroup>
-        <Link href="/unfiledTaxes">
+        <Link href="/unfiledTaxes" passHref>
           <Button>Back</Button>
         </Link>
-        <Link href="/federalOrState">
+        <Link href="/federalOrState" passHref>
           <Button>Next</Button>
         </Link>
       </ButtonGroup>

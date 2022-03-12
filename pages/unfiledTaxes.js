@@ -9,10 +9,10 @@ function unfiledTaxes() {
     <Box sx={style}>
       unfiled taxes
       <ButtonGroup>
-        <Link href="/prompted">
+        <Link href="/prompted" passHref>
           <Button>Back</Button>
         </Link>
-        <Link href="/taxDebt">
+        <Link href="/taxDebt" passHref>
           <Button>Next</Button>
         </Link>
       </ButtonGroup>

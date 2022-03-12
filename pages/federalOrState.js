@@ -9,10 +9,10 @@ function federalOrState() {
     <Box sx={style}>
       federal or state
       <ButtonGroup>
-        <Link href="/taxDebt">
+        <Link href="/taxDebt" passHref>
           <Button>Back</Button>
         </Link>
-        <Link href="/taxIssueTypes">
+        <Link href="/taxIssueTypes" passHref>
           <Button>Next</Button>
         </Link>
       </ButtonGroup>
