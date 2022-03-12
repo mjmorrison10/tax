@@ -12,6 +12,7 @@ import {
 } from "../public/Settings/baseSettings";
 import { blueGrey } from "@mui/material/colors";
 import Phase from "../components/index/phase";
+import { NavigateNext } from "@mui/icons-material";
 
 const options = [
   "Create a merge commit",
@@ -69,22 +70,68 @@ export default function Home(props) {
 
       <Box
         minHeight={"100vh"}
-        display={'flex'}
+        display={"flex"}
         flexDirection={"column"}
         alignItems={"center"}
         justifyContent={"center"}
         backgroundColor={blueGrey[500]}
       >
-        <Paper sx={{p: 1}}>
+        <Paper sx={{ p: 2, textAlign: "center" }}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            gap={3}
+          >
+            <Typography variant="caption">
+              American's Best Tax Relief Company
+            </Typography>
+            <Typography variant="h4" component="p" fontWeight={"bold"}>
+              {companyName}
+            </Typography>
+            <Typography variant="h3" component="h2" color="secondary">
+              2-Phase Quick Resolution Process
+            </Typography>
+          </Box>
 
-        <Typography>American's Best Tax Relief Company</Typography>
-        <Typography>{companyName}</Typography>
-        <Typography>2-Phase Quick Resolution Process</Typography>
-        <Box>
-
-          <Phase number={2} title={'Discovery & Strategy'} paragraph={'This preliminary phase starts with a free consultation to assess your financial situation. Then our team of certified professionals will analyze and prepare a resolution plan to present to the IRS on your behalf.'} timeFrame={'Average Time Frame: 24 hrs - 1 month'} />
-
-        </Box>
+          <Box
+            display={"flex"}
+            alignItems={"center"}
+            gap={1}
+            my={2}
+            sx={{
+              flexDirection: {
+                xs: "column",
+                sm: "row",
+              },
+            }}
+          >
+            <Phase
+              number={1}
+              title={"Discovery & Strategy"}
+              paragraph={
+                "This preliminary phase starts with a free consultation to assess your financial situation. Then our team of certified professionals will analyze and prepare a resolution plan to present to the IRS on your behalf."
+              }
+              timeFrame={"24 hrs - 1 month"}
+            />
+            <NavigateNext
+              color="secondary"
+              sx={{
+                fontSize: "5rem",
+                transform: { xs: "rotate(90deg)", sm: "rotate(0deg)" },
+              }}
+            />
+            <Phase
+              number={2}
+              comp={"h3"}
+              title={"Resolution"}
+              paragraph={
+                "After IRS compliance has been established, we’ll bring you up to date on any and all tax returns. Next, your dedicated Case Manager and Tax Attorney will present your case to the IRS to achieve the best possible resolution. "
+              }
+              timeFrame={"3-6 months"}
+            />
+          </Box>
         </Paper>
       </Box>
     </Box>
