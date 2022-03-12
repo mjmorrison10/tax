@@ -144,12 +144,14 @@ function Item(props) {
   return (
     <Box
       sx={{
-        minHeight: `${carouselHeight}`,
+        minHeight: { xs: `100vh`, sm: `${carouselHeight}` },
         backgroundImage: `url(${props.item.image})`,
         backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
         display: "flex",
-        alignItems: "flex-end",
-        justifyContent: "flex-end",
+        alignItems: { xs: "center", sm: "flex-end" },
+        justifyContent: { xs: "center", sm: "flex-end" },
       }}
     >
       <Paper
@@ -158,8 +160,9 @@ function Item(props) {
           flexDirection: "column",
           width: "fit-content",
           height: "fit-content",
-          mb: paperMbMr,
-          mr: paperMbMr,
+          mb: { md: paperMbMr, xs: "0" },
+          mr: { md: paperMbMr, xs: "0" },
+          m: { xs: 1, md: null },
           p: 2,
           backgroundColor: "rgba(200, 200, 200, 0.5)",
         }}
