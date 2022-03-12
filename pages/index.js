@@ -82,7 +82,9 @@ export default function Home(props) {
             flexDirection={"column"}
             alignItems={"center"}
             justifyContent={"center"}
-            gap={3}
+            sx={{
+              gap: { xs: 1, sm: 3 },
+            }}
           >
             <Typography variant="caption">
               American's Best Tax Relief Company
@@ -132,6 +134,17 @@ export default function Home(props) {
               timeFrame={"3-6 months"}
             />
           </Box>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            sx={{
+              width: { xs: "100%", sm: "fit-content" },
+              fontWeight: "bolder",
+            }}
+          >
+            Speak with a Tax Expert!
+          </Button>
         </Paper>
       </Box>
     </Box>

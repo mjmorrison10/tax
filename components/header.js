@@ -139,7 +139,7 @@ function Header(props) {
               justifyContent: "space-between",
             }}
           >
-            <Link href="/">
+            <Link href="/" passHref>
               <Typography
                 variant="h6"
                 component="div"
@@ -201,7 +201,7 @@ function Header(props) {
                     ></SplitButton>
                   ))}
 
-                  <Link href="/apply">
+                  <Link href="/apply" passHref>
                     <Button
                       onClick={() => {
                         activateModal();
@@ -238,7 +238,7 @@ function Header(props) {
                 ></SplitButton>
               ))}
 
-              <Link href="/apply">
+              <Link href="/apply" passHref>
                 <Button
                   endIcon={<PhoneCallback />}
                   variant="contained"

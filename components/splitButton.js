@@ -53,7 +53,8 @@ export default function SplitButton(props) {
     <React.Fragment>
       <Link
         href={props.menuOptions.length === 0 ? `/${camWords(props.title)}` : ""}
-      >
+        passHref
+     >
         <Button
           onClick={(e) => {
             handleToggle();
