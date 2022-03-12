@@ -11,6 +11,7 @@ import {
   carouselDotsHeight,
 } from "../public/Settings/baseSettings";
 import { blueGrey } from "@mui/material/colors";
+import Phase from "../components/index/phase";
 
 const options = [
   "Create a merge commit",
@@ -72,12 +73,19 @@ export default function Home(props) {
         flexDirection={"column"}
         alignItems={"center"}
         justifyContent={"center"}
-        backgroundColor={blueGrey[50]}
+        backgroundColor={blueGrey[500]}
       >
+        <Paper sx={{p: 1}}>
+
         <Typography>American's Best Tax Relief Company</Typography>
         <Typography>{companyName}</Typography>
         <Typography>2-Phase Quick Resolution Process</Typography>
-        <Box></Box>
+        <Box>
+
+          <Phase number={2} title={'Discovery & Strategy'} paragraph={'This preliminary phase starts with a free consultation to assess your financial situation. Then our team of certified professionals will analyze and prepare a resolution plan to present to the IRS on your behalf.'} timeFrame={'Average Time Frame: 24 hrs - 1 month'} />
+
+        </Box>
+        </Paper>
       </Box>
     </Box>
   );
