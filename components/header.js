@@ -52,38 +52,40 @@ const objButton = [
   {
     title: "services",
     menuTitle: [
-      "Free Tax Consultation",
-      "IRS Fresh Start Program",
-      "Tax Preparation",
-      "Tax Resolution",
+      "Tax Consultation",
+      // "IRS Fresh Start Program",
+      "Tax Preparation and Resolution",
+      // "Tax Resolution",
       "Back Taxes",
       "Unfiled Taxes",
     ],
   },
-  {
-    title: "resolved cases",
-    menuTitle: ["Success Stories", "Tax Company Reviews"],
-  },
+  // {
+  //   title: "resolved cases",
+  //   menuTitle: ["Success Stories", "Tax Company Reviews"],
+  // },
   {
     title: "resources",
     menuTitle: [
       "Frequently Asked Questions",
       "Common IRS Notices",
-      "Legitimate Tax Relief",
-      "When You Need a Tax Attorney",
+      "Tax Relief",
+      "When You Need a Tax Expert",
       "Tax Liabilities and Bankruptcy",
-      "Tax Blog & News",
     ],
   },
   {
     title: "about us",
     menuTitle: [
-      "Our Team",
-      "Our Accreditation",
-      "Our Guarantees",
-      "Careers",
+      "About Us",
+      "Why Choose Us",
+      "Our Guarantee",
       "Contact Us",
     ],
+  },
+  {
+    title: "testimonials",
+    menuTitle: ["Stories", "Reviews"],
   },
   {
     title: "clients",
