@@ -127,8 +127,8 @@ export default function Home(props) {
             Find out why so many people are using {companyName}
           </Typography>
           <Typography variant="body" color={"text.secondary"} gutterBottom>
-            Just answer a few short questions to find out if you're eligible to
-            have your tax debt reduced significantly or completely eliminated!
+            {`Just answer a few short questions to find out if you're eligible to
+            have your tax debt reduced significantly or completely eliminated!`}
           </Typography>
         </Box>
         <Button
