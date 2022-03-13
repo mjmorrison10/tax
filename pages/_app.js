@@ -11,7 +11,9 @@ import Footer from "../components/footer";
 const theme = createTheme({
   palette: {
     primary: {
+      light: blueGrey[50],
       main: blueGrey[100],
+      dark: blueGrey[200],
     },
     // secondary: {
     //   main: blue[500],
@@ -32,7 +34,7 @@ theme.typography.h3 = {
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ maxHeight: 'fit-content', backgroundColor: blue[50] }}>
+      <Box sx={{ maxHeight: "fit-content", backgroundColor: blue[50] }}>
         <Header />
         <Container maxWidth="xl">
           <Box

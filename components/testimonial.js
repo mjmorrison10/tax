@@ -25,7 +25,8 @@ function Testimonial(props) {
 
   return (
     <Paper
-      sx={{
+    sx={{
+        backgroundColor: 'primary.light',
         maxWidth: "20rem",
         px: 2,
         py: 1,

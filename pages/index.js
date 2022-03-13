@@ -71,7 +71,7 @@ export default function Home(props) {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Paper sx={{ p: 2, textAlign: "center" }}>
+        <Paper sx={{ p: 2, textAlign: "center", backgroundColor:'primary.light' }}>
           <Box
             display={"flex"}
             flexDirection={"column"}
@@ -117,7 +117,13 @@ export default function Home(props) {
           flexDirection: { xs: "column", md: "row" },
         }}
       >
-        <Box width={"50%"}>
+        <Box
+          sx={{
+            textAlign: { xs: "center", md: "inherit" },
+            width: { xs: "100%", md: "50%" },
+            maxWidth: "60ch",
+          }}
+        >
           <Typography
             variant="h6"
             component={"div"}
@@ -126,7 +132,13 @@ export default function Home(props) {
           >
             Find out why so many people are using {companyName}
           </Typography>
-          <Typography variant="body" color={"text.secondary"} gutterBottom>
+          <Typography
+            variant="body"
+            color={"text.secondary"}
+            // gutterBottom
+            sx={{
+            }}
+          >
             {`Just answer a few short questions to find out if you're eligible to
             have your tax debt reduced significantly or completely eliminated!`}
           </Typography>

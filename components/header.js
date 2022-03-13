@@ -14,7 +14,10 @@ import { grey } from "@mui/material/colors";
 import { Close, Menu, PhoneCallback } from "@mui/icons-material";
 import SplitButton from "./splitButton";
 import Link from "next/link";
-import { companyName, companyPhoneNumber } from "../public/Settings/baseSettings";
+import {
+  companyName,
+  companyPhoneNumber,
+} from "../public/Settings/baseSettings";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -132,7 +135,11 @@ function Header(props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar
+          sx={{
+            backgroundColor: "primary.light",
+          }}
+        >
           <Toolbar
             sx={{
               display: "flex",
@@ -239,25 +246,25 @@ function Header(props) {
               ))}
 
               {/* <Link > */}
-                <Button
-                  endIcon={<PhoneCallback />}
-                  variant="contained"
-                  color="primary"
-                  href="/apply"
+              <Button
+                endIcon={<PhoneCallback />}
+                variant="contained"
+                color="primary"
+                href="/apply"
+              >
+                <Box
+                  sx={{
+                    flexDirection: "column",
+                  }}
                 >
-                  <Box
-                    sx={{
-                      flexDirection: "column",
-                    }}
-                  >
-                    <Typography variant="caption" component="div">
-                      Free Consultation
-                    </Typography>
-                    <Typography variant="caption" component="div">
-                      {companyPhoneNumber}
-                    </Typography>
-                  </Box>
-                </Button>
+                  <Typography variant="caption" component="div">
+                    Free Consultation
+                  </Typography>
+                  <Typography variant="caption" component="div">
+                    {companyPhoneNumber}
+                  </Typography>
+                </Box>
+              </Button>
               {/* </Link> */}
             </ButtonGroup>
           </Toolbar>
