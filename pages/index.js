@@ -26,6 +26,7 @@ import Testimonial from "../components/testimonial";
 import TestimonialComp from "../components/index/testimonialComp";
 import { useState } from "react";
 import TestimonialsComp from "../components/testimonialsComp";
+import PhaseProcessComp from "../components/PhaseProcessComp";
 
 export default function Home(props) {
   const items = [
@@ -86,48 +87,10 @@ export default function Home(props) {
             <Typography variant="h4" component="p" fontWeight={"bold"}>
               {companyName}
             </Typography>
-            <Typography variant="h3" component="h2" color="info.main">
-              2-Phase Quick Resolution Process
-            </Typography>
           </Box>
 
-          <Box
-            display={"flex"}
-            alignItems={"center"}
-            gap={1}
-            my={2}
-            sx={{
-              flexDirection: {
-                xs: "column",
-                sm: "row",
-              },
-            }}
-          >
-            <Phase
-              number={1}
-              title={"Discovery & Strategy"}
-              paragraph={
-                "This preliminary phase starts with a free consultation to assess your financial situation. Then our team of certified professionals will analyze and prepare a resolution plan to present to the IRS on your behalf."
-              }
-              timeFrame={"24 hrs - 1 month"}
-            />
-            <NavigateNext
-              color="info"
-              sx={{
-                fontSize: "5rem",
-                transform: { xs: "rotate(90deg)", sm: "rotate(0deg)" },
-              }}
-            />
-            <Phase
-              number={2}
-              comp={"h3"}
-              title={"Resolution"}
-              paragraph={
-                "After IRS compliance has been established, we’ll bring you up to date on any and all tax returns. Next, your dedicated Case Manager and Tax Attorney will present your case to the IRS to achieve the best possible resolution. "
-              }
-              timeFrame={"3-6 months"}
-            />
-          </Box>
+          <PhaseProcessComp />
+
           <Button
             variant="contained"
             color="info"
@@ -143,21 +106,38 @@ export default function Home(props) {
       </Box>
       <SkeleBar />
 
-      <Box>
-        <TestimonialsComp margin={{xs: 2, md: 5}} />
+      <TestimonialsComp margin={{ xs: 2, md: 5 }} />
 
-        <Typography
-          variant="h6"
-          component={"div"}
-          color={"info.dark"}
-          textAlign={"center"}
-          gutterBottom
+      <Box
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        paddingX={1}
+        sx={{
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
+        <Box width={"50%"}>
+          <Typography
+            variant="h6"
+            component={"div"}
+            color={"info.dark"}
+            gutterBottom
+          >
+            Find out why so many people are using {companyName}
+          </Typography>
+          <Typography variant="body" color={"text.secondary"} gutterBottom>
+            Just answer a few short questions to find out if you're eligible to
+            have your tax debt reduced significantly or completely eliminated!
+          </Typography>
+        </Box>
+        <Button
+          color="info"
+          variant="contained"
+          sx={{ marginTop: { xs: 1, md: 0 } }}
         >
-          Find out why so many people are using {companyName}
-          <Button color="info" variant="contained" sx={{ ml: 1 }}>
-            Check out now!
-          </Button>
-        </Typography>
+          Check out now!
+        </Button>
       </Box>
     </Box>
   );

@@ -16,7 +16,7 @@ function TestimonialsComp({ margin }) {
   }
 
   console.log(margin);
-  
+
   return (
     <Box my={margin}>
       <Typography
@@ -25,7 +25,7 @@ function TestimonialsComp({ margin }) {
         color="info.main"
         textAlign={"center"}
       >
-        Testimonials
+        Our Clients sees the value in us!
       </Typography>
 
       <Pagination
