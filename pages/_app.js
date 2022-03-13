@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { blue, grey } from "@mui/material/colors";
+import { blue, blueGrey, grey } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import Header from "../components/header";
@@ -11,7 +11,7 @@ import Footer from "../components/footer";
 const theme = createTheme({
   palette: {
     primary: {
-      main: grey[200],
+      main: blueGrey[100],
     },
     // secondary: {
     //   main: blue[500],
@@ -32,7 +32,7 @@ theme.typography.h3 = {
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: blue[50] }}>
+      <Box sx={{ maxHeight: 'fit-content', backgroundColor: blue[50] }}>
         <Header />
         <Container maxWidth="xl">
           <Box
