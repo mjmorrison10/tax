@@ -32,10 +32,18 @@ theme.typography.h3 = {
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ minHeight: "100vh", backgroundColor: blue[50] }}>
+      <Box sx={{ backgroundColor: blue[50] }}>
         <Header />
         <Container maxWidth="xl">
-          <Box sx={{ mt: { xs: 2, md: 9, lg: 2 } }}>
+          <Box
+            sx={{
+              minHeight: "100vh",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              mt: { xs: 2, md: 9, lg: 2 },
+            }}
+          >
             <Component {...pageProps} />
             <Footer />
           </Box>

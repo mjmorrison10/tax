@@ -2,7 +2,7 @@ import React from 'react'
 
 function getStarted() {
   return (
-    <div>getStarted</div>
+    <div>Get Started page links to the Google Form! :)</div>
   )
 }
 
