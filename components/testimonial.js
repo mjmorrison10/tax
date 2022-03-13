@@ -13,9 +13,9 @@ function Testimonial(props) {
 
   const starArr = Array(starReview).fill(starReview);
 
-  if (numb < 3) return null
-  
-  if (numb > 5) return null
+  if (numb < 3) return null;
+
+  if (numb > 5) return null;
 
   return (
     <Paper
@@ -35,14 +35,12 @@ function Testimonial(props) {
       >
         {ellipWords(comment, 100)}
       </Typography>
-      <Typography
-        variant="subtitle1"
-        fontWeight={"bold"}
-        children={name}
-      ></Typography>
+      <Typography variant="subtitle1" fontWeight={"bold"}>
+        {name}
+      </Typography>
 
       <Box display={"flex"} gap={1} justifyContent={"space-between"}>
-        <Typography variant="overline" children={date}></Typography>
+        <Typography variant="overline">{date}</Typography>
         <Box display={"flex"} gap={0.5}>
           {starArr.map((star, i) => (
             <StarRounded
