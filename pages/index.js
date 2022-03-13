@@ -17,7 +17,6 @@ import { NavigateNext } from "@mui/icons-material";
 import SkeleBar from "../components/SkeleBar";
 import Testimonial from "../components/testimonial";
 
-
 export default function Home(props) {
   const items = [
     {
@@ -142,10 +141,14 @@ export default function Home(props) {
 
       <Box
         display={"flex"}
+        sx={{
+          flexDirection: { xs: "column", sm: "row" },
+        }}
         justifyContent={"center"}
         alignItems={"center"}
         gap={1}
       >
+        <Typography variant='h3' component={'h2'} >Testimonials</Typography>
         {testimonialsInfo.map((test, i) => (
           <Testimonial
             title={test.title}
