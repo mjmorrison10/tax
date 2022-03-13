@@ -15,7 +15,6 @@ function Testimonial(props) {
   const starArr = Array(starReview).fill(starReview);
 
   // if (numb < 3) return null;
-  console.log(currentPage);
 
 
   if (currentPage == 1 && numb > 2) return null;

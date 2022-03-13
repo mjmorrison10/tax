@@ -25,11 +25,9 @@ import SkeleBar from "../components/SkeleBar";
 import Testimonial from "../components/testimonial";
 import TestimonialComp from "../components/index/testimonialComp";
 import { useState } from "react";
+import TestimonialsComp from "../components/testimonialsComp";
 
 export default function Home(props) {
-  const [testiminalsState, setTestimonialsState] = useState([]);
-  const [currentPage, setCurrentPage] = useState(3);
-
   const items = [
     {
       name: `Are you in need of tax relief?`,
@@ -51,28 +49,11 @@ export default function Home(props) {
     },
   ];
 
-  let totalPages = Math.ceil(testimonialsInfo.length / 3);
-
-  function handlePageChange(e) {
-    const numb = e.target.innerText;
-
-    if (!isNaN(numb)) {
-      setCurrentPage(numb);
-      console.log(currentPage);
-    }
-  }
-
   return (
-    <Box
-    // sx={{
-    //   backgroundColor: "blue",
-    //   height: "100vh",
-    //   width: "100%",
-    // }}
-    >
+    <Box>
       <Carousel
         sx={{
-          minHeight: `${carouselHeight}`,
+          minHeight: { xs: "fit-content" },
         }}
       >
         {items.map((item, i) => (
@@ -162,67 +143,22 @@ export default function Home(props) {
       </Box>
       <SkeleBar />
 
-      <Typography
-        variant="h3"
-        component={"h2"}
-        color="info.main"
-        textAlign={"center"}
-        my={1}
-      >
-        Testimonials
-      </Typography>
+      <Box>
+        <TestimonialsComp margin={{xs: 2, md: 5}} />
 
-      <Pagination
-        color="info"
-        count={totalPages}
-        onChange={handlePageChange}
-        hideNextButton={true}
-        hidePrevButton={true}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        // renderItem={testimonialComp}
-      />
-
-      <Box
-        display={"flex"}
-        flexWrap={"wrap"}
-        sx={{
-          flexDirection: { xs: "column", sm: "row" },
-        }}
-        justifyContent={"center"}
-        alignItems={"center"}
-        gap={1}
-        pb={2}
-      >
-        {testimonialsInfo.map((test, i) => (
-          <Testimonial
-            title={test.title}
-            comment={test.comment}
-            name={test.name}
-            starReview={test.starReview}
-            date={test.date}
-            key={i}
-            numb={i}
-            currentPage={currentPage}
-            setCurrentPage
-          />
-        ))}
+        <Typography
+          variant="h6"
+          component={"div"}
+          color={"info.dark"}
+          textAlign={"center"}
+          gutterBottom
+        >
+          Find out why so many people are using {companyName}
+          <Button color="info" variant="contained" sx={{ ml: 1 }}>
+            Check out now!
+          </Button>
+        </Typography>
       </Box>
-      <Typography
-        variant="h6"
-        component={"div"}
-        color={"info.dark"}
-        textAlign={"center"}
-        gutterBottom
-      >
-        Find out why so many people are using {companyName}
-        <Button color="info" variant="contained" sx={{ ml: 1 }}>
-          Check out now!
-        </Button>
-      </Typography>
     </Box>
   );
 }
