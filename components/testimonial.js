@@ -27,7 +27,7 @@ function Testimonial(props) {
   return (
     <Paper
       sx={{
-        width: "20rem",
+        maxWidth: "20rem",
         px: 2,
         py: 1,
       }}

@@ -80,11 +80,11 @@ export const testimonialsInfo = [
         date: '3/10/2022',
         starReview: 4,
     },
-    {
-        name: 'Becky4',
-        title: "I couldn't understand the forms, they helped!",
-        comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias porro iste maxime ratione fugiat officia quisquam illo sit eligendi iusto?',
-        date: '2/14/2022',
-        starReview: 5,
-    },
+    // {
+    //     name: 'Becky4',
+    //     title: "I couldn't understand the forms, they helped!",
+    //     comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias porro iste maxime ratione fugiat officia quisquam illo sit eligendi iusto?',
+    //     date: '2/14/2022',
+    //     starReview: 5,
+    // },
 ]

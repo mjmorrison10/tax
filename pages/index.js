@@ -195,6 +195,7 @@ export default function Home(props) {
         justifyContent={"center"}
         alignItems={"center"}
         gap={1}
+        pb={2}
       >
         {testimonialsInfo.map((test, i) => (
           <Testimonial
@@ -210,6 +211,18 @@ export default function Home(props) {
           />
         ))}
       </Box>
+      <Typography
+        variant="h6"
+        component={"div"}
+        color={"info.dark"}
+        textAlign={"center"}
+        gutterBottom
+      >
+        Find out why so many people are using {companyName}
+        <Button color="info" variant="contained" sx={{ ml: 1 }}>
+          Check out now!
+        </Button>
+      </Typography>
     </Box>
   );
 }

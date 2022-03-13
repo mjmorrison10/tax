@@ -6,6 +6,7 @@ import { blue, grey } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 const theme = createTheme({
   palette: {
@@ -21,14 +22,22 @@ const theme = createTheme({
   },
 });
 
+theme.typography.h3 = {
+  fontSize: "3rem",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "2rem",
+  },
+};
+
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ minHeight: "100vh", backgroundColor: blue[50] }}>
         <Header />
         <Container maxWidth="xl">
-          <Box sx={{ my: { xs: 2, md: 9, lg: 2 } }}>
+          <Box sx={{ mt: { xs: 2, md: 9, lg: 2 } }}>
             <Component {...pageProps} />
+            <Footer />
           </Box>
         </Container>
       </Box>
