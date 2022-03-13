@@ -238,11 +238,12 @@ function Header(props) {
                 ></SplitButton>
               ))}
 
-              <Link href="/apply">
+              {/* <Link > */}
                 <Button
                   endIcon={<PhoneCallback />}
                   variant="contained"
                   color="primary"
+                  href="/apply"
                 >
                   <Box
                     sx={{
@@ -257,7 +258,7 @@ function Header(props) {
                     </Typography>
                   </Box>
                 </Button>
-              </Link>
+              {/* </Link> */}
             </ButtonGroup>
           </Toolbar>
         </AppBar>
