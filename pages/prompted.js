@@ -32,9 +32,9 @@ function prompted() {
   };
 
   const formCheckboxStyle = {
-    color: "secondary.main",
+    color: "info.main",
     "&.Mui-checked": {
-      color: "secondary.main",
+      color: "info.main",
     },
   };
 
@@ -63,7 +63,7 @@ function prompted() {
       >
         <LinearProgress
           variant="determinate"
-          color="secondary"
+          color="info"
           value={linearProgressValue}
           sx={{ height: linearProgressHeight }}
         />
@@ -110,12 +110,12 @@ function prompted() {
 
         <ButtonGroup fullWidth>
           <Link href="/apply" passHref>
-            <Button color="secondary" startIcon={<ArrowBack />}>
+            <Button color="info" startIcon={<ArrowBack />}>
               Back
             </Button>
           </Link>
           <Link href="/unfiledTaxes" passHref>
-            <Button color="secondary" endIcon={<ArrowForward />}>
+            <Button color="info" endIcon={<ArrowForward />}>
               Next
             </Button>
           </Link>

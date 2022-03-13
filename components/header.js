@@ -191,7 +191,7 @@ function Header(props) {
                       isModalOpen={open}
                       modal={activateModal}
                       variant={`contained`}
-                      color={"secondary"}
+                      color={"info"}
                       key={i}
                       title={`${btn.title}`}
                       menuOptions={btn.menuTitle}
@@ -231,14 +231,14 @@ function Header(props) {
               {objButton.map((btn, i) => (
                 <SplitButton
                   variant={`contained`}
-                  color={"secondary"}
+                  color={"info"}
                   key={i}
                   title={`${btn.title}`}
                   menuOptions={btn.menuTitle}
                 ></SplitButton>
               ))}
 
-              <Link href="/apply" passHref>
+              <Link href="/apply">
                 <Button
                   endIcon={<PhoneCallback />}
                   variant="contained"

@@ -51,26 +51,27 @@ export default function SplitButton(props) {
 
   return (
     <React.Fragment>
-      <Link
+      {/* <Link
         href={props.menuOptions.length === 0 ? `/${camWords(props.title)}` : ""}
         passHref
-     >
-        <Button
-          onClick={(e) => {
-            handleToggle();
-            handleClick(e);
-          }}
-          variant={props.variant}
-          color={props.color}
-          // children={props.children}
-          ref={anchorRef}
-          aria-label="split button"
-          sx={{ zIndex: "10", height: "fit-content" }}
-          endIcon={props.menuOptions.length > 0 ? <ArrowDropDownIcon /> : null}
-        >
-          {props.title}
-        </Button>
-      </Link>
+        > */}
+      <Button
+        href={props.menuOptions.length === 0 ? `/${camWords(props.title)}` : ""}
+        onClick={(e) => {
+          handleToggle();
+          handleClick(e);
+        }}
+        variant={props.variant}
+        color={props.color}
+        // children={props.children}
+        ref={anchorRef}
+        aria-label="split button"
+        sx={{ zIndex: "10", height: "fit-content" }}
+        endIcon={props.menuOptions.length > 0 ? <ArrowDropDownIcon /> : null}
+      >
+        {props.title}
+      </Button>
+      {/* </Link> */}
 
       <Popper
         open={open}

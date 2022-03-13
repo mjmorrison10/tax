@@ -1,4 +1,11 @@
-import { Button, Paper, Box, Typography, Skeleton } from "@mui/material";
+import {
+  Button,
+  Paper,
+  Box,
+  Typography,
+  Skeleton,
+  Pagination,
+} from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import Carousel from "react-material-ui-carousel";
@@ -16,8 +23,13 @@ import Phase from "../components/index/phase";
 import { NavigateNext } from "@mui/icons-material";
 import SkeleBar from "../components/SkeleBar";
 import Testimonial from "../components/testimonial";
+import TestimonialComp from "../components/index/testimonialComp";
+import { useState } from "react";
 
 export default function Home(props) {
+  const [testiminalsState, setTestimonialsState] = useState([]);
+  const [currentPage, setCurrentPage] = useState(3);
+
   const items = [
     {
       name: `Are you in need of tax relief?`,
@@ -38,6 +50,17 @@ export default function Home(props) {
       image: "/images/rejoicing.jpg",
     },
   ];
+
+  let totalPages = Math.ceil(testimonialsInfo.length / 3);
+
+  function handlePageChange(e) {
+    const numb = e.target.innerText;
+
+    if (!isNaN(numb)) {
+      setCurrentPage(numb);
+      console.log(currentPage);
+    }
+  }
 
   return (
     <Box
@@ -82,7 +105,7 @@ export default function Home(props) {
             <Typography variant="h4" component="p" fontWeight={"bold"}>
               {companyName}
             </Typography>
-            <Typography variant="h3" component="h2" color="secondary">
+            <Typography variant="h3" component="h2" color="info.main">
               2-Phase Quick Resolution Process
             </Typography>
           </Box>
@@ -108,7 +131,7 @@ export default function Home(props) {
               timeFrame={"24 hrs - 1 month"}
             />
             <NavigateNext
-              color="secondary"
+              color="info"
               sx={{
                 fontSize: "5rem",
                 transform: { xs: "rotate(90deg)", sm: "rotate(0deg)" },
@@ -126,7 +149,7 @@ export default function Home(props) {
           </Box>
           <Button
             variant="contained"
-            color="secondary"
+            color="info"
             size="large"
             sx={{
               width: { xs: "100%", sm: "fit-content" },
@@ -139,8 +162,33 @@ export default function Home(props) {
       </Box>
       <SkeleBar />
 
+      <Typography
+        variant="h3"
+        component={"h2"}
+        color="info.main"
+        textAlign={"center"}
+        my={1}
+      >
+        Testimonials
+      </Typography>
+
+      <Pagination
+        color="info"
+        count={totalPages}
+        onChange={handlePageChange}
+        hideNextButton={true}
+        hidePrevButton={true}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        // renderItem={testimonialComp}
+      />
+
       <Box
         display={"flex"}
+        flexWrap={"wrap"}
         sx={{
           flexDirection: { xs: "column", sm: "row" },
         }}
@@ -148,7 +196,6 @@ export default function Home(props) {
         alignItems={"center"}
         gap={1}
       >
-        <Typography variant='h3' component={'h2'} >Testimonials</Typography>
         {testimonialsInfo.map((test, i) => (
           <Testimonial
             title={test.title}
@@ -158,6 +205,8 @@ export default function Home(props) {
             date={test.date}
             key={i}
             numb={i}
+            currentPage={currentPage}
+            setCurrentPage
           />
         ))}
       </Box>
@@ -204,7 +253,7 @@ function Item(props) {
         {props.item.button && (
           <Button
             variant="contained"
-            color="secondary"
+            color="info"
             sx={{ alignSelf: "flex-end" }}
           >
             {props.item.button}
