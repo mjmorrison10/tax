@@ -9,17 +9,14 @@ import {
   companyPhoneNumber,
   carouselHeight,
   carouselDotsHeight,
+  testimonialsInfo,
 } from "../public/Settings/baseSettings";
 import { blueGrey } from "@mui/material/colors";
 import Phase from "../components/index/phase";
 import { NavigateNext } from "@mui/icons-material";
 import SkeleBar from "../components/SkeleBar";
+import Testimonial from "../components/testimonial";
 
-const options = [
-  "Create a merge commit",
-  "Squash and merge",
-  "Rebase and merfdsfdsge",
-];
 
 export default function Home(props) {
   const items = [
@@ -143,6 +140,24 @@ export default function Home(props) {
       </Box>
       <SkeleBar />
 
+      <Box
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        gap={1}
+      >
+        {testimonialsInfo.map((test, i) => (
+          <Testimonial
+            title={test.title}
+            comment={test.comment}
+            name={test.name}
+            starReview={test.starReview}
+            date={test.date}
+            key={i}
+            numb={i}
+          />
+        ))}
+      </Box>
     </Box>
   );
 }
