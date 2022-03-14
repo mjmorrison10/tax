@@ -6,7 +6,30 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import { ExpandMore } from "@mui/icons-material";
+import {
+  Check,
+  ExpandMore,
+  Looks3Outlined,
+  Looks4Outlined,
+  Looks5Outlined,
+  LooksOneOutlined,
+  LooksTwoOutlined,
+} from "@mui/icons-material";
+import TestimonialsComp from "../../components/testimonialsComp";
+
+const checkmark = (
+  <Check
+    sx={{
+      color: "secondary.light",
+    }}
+  />
+);
+
+const one = <LooksOneOutlined sx={{ color: "secondary.light" }} />;
+const two = <LooksTwoOutlined sx={{ color: "secondary.light" }} />;
+const three = <Looks3Outlined sx={{ color: "secondary.light" }} />;
+const four = <Looks4Outlined sx={{ color: "secondary.light" }} />;
+const five = <Looks5Outlined sx={{ color: "secondary.light" }} />;
 
 function TaxConsultation() {
   return (
@@ -18,14 +41,24 @@ function TaxConsultation() {
       gap={1}
     >
       <Box>
-        <Typography>Free Tax Consultation</Typography>
-        <Typography>Qualify for tax relief in minutes!</Typography>
-        <Typography>
-        {`  Your free consultation provides us with all the necessary information
+        <Typography variant="h3" component={"h1"} color="info.dark">
+          Free Tax Consultation
+        </Typography>
+        <Typography variant="h4" component={"div"}>
+          Qualify for tax relief in minutes!
+        </Typography>
+        <Typography variant="body">
+          {`  Your free consultation provides us with all the necessary information
           we'll need to see if:`}
         </Typography>
-        <Typography>you qualify for our services and</Typography>
-        <Typography>which tax relief package works best for you</Typography>
+        <Typography variant="body2">
+          {checkmark}
+          you qualify for our services and
+        </Typography>
+        <Typography variant="body2">
+          {checkmark}
+          which tax relief package works best for you
+        </Typography>
       </Box>
 
       <Typography gutterBottom variant="body">
@@ -100,15 +133,31 @@ function TaxConsultation() {
           <Typography variant="body" gutterBottom>
             These questions will include:
           </Typography>
-          <Typography variant="body" fontWeight={"bold"} gutterBottom>
-            your current tax debt amount (and if it is state or federal)
+          <Typography
+            variant="body"
+            fontWeight={"bold"}
+            gutterBottom
+            display={"flex"}
+          >
+            {checkmark}your current tax debt amount (and if it is state or
+            federal)
           </Typography>
-          <Typography variant="body" fontWeight={"bold"} gutterBottom>
-            your monthly expenses and income
+          <Typography
+            variant="body"
+            fontWeight={"bold"}
+            gutterBottom
+            display={"flex"}
+          >
+            {checkmark}your monthly expenses and income
           </Typography>
-          <Typography variant="body" fontWeight={"bold"} gutterBottom>
-            some basic information on any assets you may own (such as a house or
-            a car)
+          <Typography
+            variant="body"
+            fontWeight={"bold"}
+            gutterBottom
+            display={"flex"}
+          >
+            {checkmark}some basic information on any assets you may own (such as
+            a house or a car)
           </Typography>
           <Typography variant="body" gutterBottom>
             Your assigned Resolution Officer will be able to answer any
@@ -125,19 +174,37 @@ function TaxConsultation() {
             Your free tax consultation phone call will last approximately thirty
             minutes and is broken up into three parts:
           </Typography>
-          <Typography variant="body" fontWeight={"bold"} gutterBottom>
-            Your Situation— The Resolution Officer will give you the opportunity
-            to tell them how you ended up in tax debt, so that we have the
-            proper perspective moving forward.
+          <Typography
+            variant="body"
+            fontWeight={"bold"}
+            gutterBottom
+            display={"flex"}
+            justifyContent={"center"}
+          >
+            {one}Your Situation— The Resolution Officer will give you the
+            opportunity to tell them how you ended up in tax debt, so that we
+            have the proper perspective moving forward.
           </Typography>
-          <Typography variant="body" fontWeight={"bold"} gutterBottom>
-            The Interview — We ask our questions to determine if you qualify for
-            the Fresh Start Program.
+          <Typography
+            variant="body"
+            fontWeight={"bold"}
+            gutterBottom
+            display={"flex"}
+            justifyContent={"center"}
+          >
+            {two}The Interview — We ask our questions to determine if you
+            qualify for the Fresh Start Program.
           </Typography>
-          <Typography variant="body" fontWeight={"bold"} gutterBottom>
-            Your Options — After we confirm whether you are a candidate for tax
-            relief, we will map out the most likely tax relief scenarios and
-            help you determine the next steps.
+          <Typography
+            variant="body"
+            fontWeight={"bold"}
+            gutterBottom
+            display={"flex"}
+            justifyContent={"center"}
+          >
+            {three}Your Options — After we confirm whether you are a candidate
+            for tax relief, we will map out the most likely tax relief scenarios
+            and help you determine the next steps.
           </Typography>
           <Typography variant="body" gutterBottom>
             TaxRise realizes that your time is valuable. Our objective is always
@@ -169,41 +236,52 @@ function TaxConsultation() {
             If you qualify for the Fresh Start Program and choose to work with
             us, we will use the following process:
           </Typography>
-          <Typography variant="body" gutterBottom>
-            <Box fontWeight={"bold"}>
-              Discovery Phase, plus Analysis and Strategy:
-            </Box>{" "}
-            After your initial tax consultation, we will acquire all necessary
-            documents to prepare your case for the best resolution possible. You
-            will be assigned your very own TaxRise team, who will review the
-            findings and create a strategy for your case.
+          <Typography variant="body" gutterBottom display={"flex"}>
+            {checkmark}
+            <Box>
+              <Box fontWeight={"bold"}>
+                Discovery Phase, plus Analysis and Strategy:
+              </Box>{" "}
+              After your initial tax consultation, we will acquire all necessary
+              documents to prepare your case for the best resolution possible.
+              You will be assigned your very own TaxRise team, who will review
+              the findings and create a strategy for your case.
+            </Box>
           </Typography>
-          <Typography variant="body" gutterBottom>
-            <Box fontWeight={"bold"}>Review and Advise:</Box> Before your
-            TaxRise team files paperwork for the resolution, we will meet with
-            you to share our findings and present our strategy for your
-            approval.
+          <Typography variant="body" gutterBottom display={"flex"}>
+            {checkmark}
+            <Box>
+              <Box fontWeight={"bold"}>Review and Advise:</Box> Before your
+              TaxRise team files paperwork for the resolution, we will meet with
+              you to share our findings and present our strategy for your
+              approval.
+            </Box>
           </Typography>
-          <Typography variant="body" gutterBottom>
-            <Box fontWeight={"bold"}>
-              Presentation, Negotiation, and Submission:
-            </Box>{" "}
-            Once you approve of our plan, we will prepare your case documents
-            for presentation. Then, our experts will present your case to the
-            IRS (or State) and negotiate until we achieve the best possible
-            resolution. After your final approval of the resolution, we will
-            submit the case on your behalf.
+          <Typography variant="body" gutterBottom display={"flex"}>
+            {checkmark}
+            <Box>
+              <Box fontWeight={"bold"}>
+                Presentation, Negotiation, and Submission:
+              </Box>{" "}
+              Once you approve of our plan, we will prepare your case documents
+              for presentation. Then, our experts will present your case to the
+              IRS (or State) and negotiate until we achieve the best possible
+              resolution. After your final approval of the resolution, we will
+              submit the case on your behalf.
+            </Box>
           </Typography>
-          <Typography variant="body" gutterBottom>
-            <Box fontWeight={"bold"}>Compliance:</Box> Unlike other companies,
-            TaxRise sets you up for success after our primary services are
-            complete. By working with you and offering you tools to stay
-            compliant, we’ll help you avoid accumulating tax debt again.
+          <Typography variant="body" gutterBottom display={"flex"}>
+            {checkmark}
+            <Box>
+              <Box fontWeight={"bold"}>Compliance:</Box> Unlike other companies,
+              TaxRise sets you up for success after our primary services are
+              complete. By working with you and offering you tools to stay
+              compliant, we’ll help you avoid accumulating tax debt again.
+            </Box>
           </Typography>
           <Typography variant="body" gutterBottom>
             Throughout our process, you can talk to a tax expert if any
-            questions should arise. To learn additional information about our
-            services, read about our tax relief process.
+            questions should arise. 
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -239,11 +317,11 @@ function TaxConsultation() {
             Below are several resources you may find helpful on your journey to
             tax relief:
           </Typography>
-          <Typography variant="body" gutterBottom>
-            Contacting the IRS
+          <Typography variant="body" gutterBottom display={'flex'}>
+            {checkmark}Contacting the IRS
           </Typography>
-          <Typography variant="body" gutterBottom>
-            Tax Relief Programs Information
+          <Typography variant="body" gutterBottom display={'flex'}>
+            {checkmark}Tax Relief Programs Information
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -281,17 +359,17 @@ function TaxConsultation() {
             There are four main programs available to taxpayers through the
             Fresh Start Program:
           </Typography>
-          <Typography variant="body" gutterBottom>
-            Installment Agreement
+          <Typography variant="body" gutterBottom display={'flex'} >
+            {one}Installment Agreement
           </Typography>
-          <Typography variant="body" gutterBottom>
-            Offer in Compromise
+          <Typography variant="body" gutterBottom display={'flex'}>
+            {two}Offer in Compromise
           </Typography>
-          <Typography variant="body" gutterBottom>
-            Currently Non-Collectible Status
+          <Typography variant="body" gutterBottom display={'flex'}>
+            {three}Currently Non-Collectible Status
           </Typography>
-          <Typography variant="body" gutterBottom>
-            Penalty Abatement
+          <Typography variant="body" gutterBottom display={'flex'}>
+            {four}Penalty Abatement
           </Typography>
           <Typography variant="body" gutterBottom>
             Read more about the Fresh Start Program to see what tax relief
@@ -418,15 +496,20 @@ function TaxConsultation() {
         </AccordionDetails>
       </Accordion> */}
 
-      <Typography variant="h4" component={'h2'} >Complete Your Free Tax Consultation Today</Typography>
+      <Typography variant="h4" component={"h2"}>
+        Complete Your Free Tax Consultation Today
+      </Typography>
       <Typography variant="body">
         Take the first step in your journey to tax relief. Contact TaxRise today
         for a free tax consultation phone call.
       </Typography>
       <Typography variant="body">
-        For more information and new 2021 tax relief updates, check out our tax
+        For more information and new 2022 tax relief updates, check out our tax
         blog or follow us on Facebook and Twitter!
       </Typography>
+
+      <TestimonialsComp title={'Testimonials'} />
+      
     </Box>
   );
 }

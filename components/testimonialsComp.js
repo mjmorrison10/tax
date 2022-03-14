@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { testimonialsInfo } from "../public/Settings/baseSettings";
 import Testimonial from "./testimonial";
 
-function TestimonialsComp({ margin }) {
+function TestimonialsComp({ margin, title = 'Our Clients sees the value in us!' }) {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(testimonialsInfo.length / 3);
 
@@ -14,6 +14,7 @@ function TestimonialsComp({ margin }) {
       setCurrentPage(numb);
     }
   }
+  console.log(title);
 
   return (
     <Box my={margin}>
@@ -23,7 +24,8 @@ function TestimonialsComp({ margin }) {
         color="info.main"
         textAlign={"center"}
       >
-        Our Clients sees the value in us!
+        {title}
+        {/* Our Clients sees the value in us! */}
       </Typography>
 
       <Pagination
