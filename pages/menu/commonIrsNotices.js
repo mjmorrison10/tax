@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 
 function commonIrsNotices() {
   const notices = [
@@ -237,7 +237,7 @@ function commonIrsNotices() {
               sx={{ display: "flex", flexDirection: "column", gap: 1 }}
             >
               <Typography variant="body" component={'h3'} fontWeight={"bold"}>
-                What it's saying
+               {`What it's saying`}
               </Typography>
               <Typography variant="body">{n.saying}</Typography>
               {n.saying2 && <Typography variant="body">{n.saying2}</Typography>}
