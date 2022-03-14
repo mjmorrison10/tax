@@ -14,19 +14,23 @@ function Testimonial(props) {
 
   const starArr = Array(starReview).fill(starReview);
 
-  // if (numb < 3) return null;
-
-
   if (currentPage == 1 && numb > 2) return null;
-  if (currentPage == 2 && (numb > 5 || numb < 3)) return null;
-  if (currentPage == 3 && (numb > 8 || numb < 6)) return null;
-  if (currentPage == 4 && (numb > 11 || numb < 9)) return null;
 
+  if (
+    currentPage > 1 &&
+    (numb > currentPage * 3 - 1 || numb < currentPage * 3 - 3)
+  )
+    return null;
+
+  // if (> (currentPage * 2 - 1))
+  // if (currentPage == 2 && (numb > 5 || numb < 3)) return null;
+  // if (currentPage == 3 && (numb > 8 || numb < 6)) return null;
+  // if (currentPage == 4 && (numb > 11 || numb < 9)) return null;
 
   return (
     <Paper
-    sx={{
-        backgroundColor: 'primary.light',
+      sx={{
+        backgroundColor: "primary.light",
         maxWidth: "20rem",
         px: 2,
         py: 1,

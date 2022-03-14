@@ -71,7 +71,7 @@ export default function Home(props) {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Paper sx={{ p: 2, textAlign: "center", backgroundColor:'primary.light' }}>
+        <Paper sx={{ p: 2, textAlign: "center", backgroundColor: 'primary.light' }}>
           <Box
             display={"flex"}
             flexDirection={"column"}

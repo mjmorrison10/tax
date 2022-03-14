@@ -21,8 +21,8 @@ function TaxConsultation() {
         <Typography>Free Tax Consultation</Typography>
         <Typography>Qualify for tax relief in minutes!</Typography>
         <Typography>
-          Your free consultation provides us with all the necessary information
-          we'll need to see if:
+        {`  Your free consultation provides us with all the necessary information
+          we'll need to see if:`}
         </Typography>
         <Typography>you qualify for our services and</Typography>
         <Typography>which tax relief package works best for you</Typography>

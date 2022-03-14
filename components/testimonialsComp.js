@@ -15,8 +15,6 @@ function TestimonialsComp({ margin }) {
     }
   }
 
-  console.log(margin);
-
   return (
     <Box my={margin}>
       <Typography
