@@ -16,6 +16,7 @@ import {
   LooksTwoOutlined,
 } from "@mui/icons-material";
 import TestimonialsComp from "../../components/testimonialsComp";
+import TitleComp from "./components/title";
 
 const checkmark = (
   <Check
@@ -40,10 +41,8 @@ function TaxConsultation() {
       margin={"0 auto"}
       gap={1}
     >
+      <TitleComp title="Free Tax Consultation" />
       <Box>
-        <Typography variant="h3" component={"h1"} color="info.dark">
-          Free Tax Consultation
-        </Typography>
         <Typography variant="h4" component={"div"}>
           Qualify for tax relief in minutes!
         </Typography>
@@ -281,7 +280,7 @@ function TaxConsultation() {
           </Typography>
           <Typography variant="body" gutterBottom>
             Throughout our process, you can talk to a tax expert if any
-            questions should arise. 
+            questions should arise.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -317,10 +316,10 @@ function TaxConsultation() {
             Below are several resources you may find helpful on your journey to
             tax relief:
           </Typography>
-          <Typography variant="body" gutterBottom display={'flex'}>
+          <Typography variant="body" gutterBottom display={"flex"}>
             {checkmark}Contacting the IRS
           </Typography>
-          <Typography variant="body" gutterBottom display={'flex'}>
+          <Typography variant="body" gutterBottom display={"flex"}>
             {checkmark}Tax Relief Programs Information
           </Typography>
         </AccordionDetails>
@@ -359,16 +358,16 @@ function TaxConsultation() {
             There are four main programs available to taxpayers through the
             Fresh Start Program:
           </Typography>
-          <Typography variant="body" gutterBottom display={'flex'} >
+          <Typography variant="body" gutterBottom display={"flex"}>
             {one}Installment Agreement
           </Typography>
-          <Typography variant="body" gutterBottom display={'flex'}>
+          <Typography variant="body" gutterBottom display={"flex"}>
             {two}Offer in Compromise
           </Typography>
-          <Typography variant="body" gutterBottom display={'flex'}>
+          <Typography variant="body" gutterBottom display={"flex"}>
             {three}Currently Non-Collectible Status
           </Typography>
-          <Typography variant="body" gutterBottom display={'flex'}>
+          <Typography variant="body" gutterBottom display={"flex"}>
             {four}Penalty Abatement
           </Typography>
           <Typography variant="body" gutterBottom>
@@ -508,8 +507,7 @@ function TaxConsultation() {
         blog or follow us on Facebook and Twitter!
       </Typography>
 
-      <TestimonialsComp title={'Testimonials'} />
-      
+      <TestimonialsComp title={"Testimonials"} />
     </Box>
   );
 }

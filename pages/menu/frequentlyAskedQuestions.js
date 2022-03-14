@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import CardComp from "../../components/CardComp";
 import { companyPhoneNumber } from "../../public/Settings/baseSettings";
+import TitleComp from "./components/title";
 
 function frequentlyAskedQuestions() {
   const QA = [
@@ -59,7 +60,7 @@ function frequentlyAskedQuestions() {
   return (
 
 <Box>
-  <Typography variant="h3" component={'h1'} textAlign={'center'}>Frequently Asked Questions</Typography>
+  <TitleComp title='Frequently Asked Questions' />
   <Box display={'flex'} gap={2} flexWrap={'wrap'} alignItems={'center'} justifyContent={'center'} >
   
         {QA.map((q, i) => (

@@ -11,6 +11,7 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import NoticeComp from "../../components/commonIrsNotices/noticeComp";
 import { notices, noticesLabel } from "../../public/Settings/baseSettings";
+import TitleComp from "./components/title";
 
 function CommonIrsNotices() {
   // const [expanded, setExpanded] = useState(false);
@@ -55,14 +56,15 @@ function CommonIrsNotices() {
 
   return (
     <Box>
-      <Typography
+      {/* <Typography
         variant="h3"
         component={"h1"}
         textAlign={"center"}
         color="info.dark"
       >
         Common IRS Notices
-      </Typography>
+      </Typography> */}
+      <TitleComp title='Common IRS Notices' />
 
       <Box display={"flex"} alignItems={"center"} justifyContent={"center"}>
         <Autocomplete
