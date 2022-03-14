@@ -15,6 +15,11 @@ import { notices, noticesLabel } from "../../public/Settings/baseSettings";
 function CommonIrsNotices() {
   // const [expanded, setExpanded] = useState(false);
 
+  const [value, setValue] = React.useState("");
+  const [inputValue, setInputValue] = React.useState("");
+
+  // const [expanded, setExpanded] = useState(false);
+
   // const handleChange = (panel) => (event, isExpanded) => {
   //   setExpanded(isExpanded ? panel : false);
   // };
@@ -35,21 +40,18 @@ function CommonIrsNotices() {
       });
 
       return (
-        <Box display={"flex"} flexDirection={"column"}>
-          <NoticeComp i={1} n={findNotice} />
-        </Box>
+        // <Box display={"flex"} flexDirection={"column"}>
+        <NoticeComp key={i} i={1} n={findNotice} />
+        // </Box>
       );
     } else {
       return notices.map((n, i) => (
-        <Box key={i} display={"flex"} flexDirection={"column"}>
-          <NoticeComp i={i} n={n} />
-        </Box>
+        // <Box key={i} display={"flex"} flexDirection={"column"}>
+        <NoticeComp key={i} i={i} n={n} />
+        // </Box>
       ));
     }
   }
-
-  const [value, setValue] = React.useState("");
-  const [inputValue, setInputValue] = React.useState("");
 
   return (
     <Box>
@@ -80,8 +82,15 @@ function CommonIrsNotices() {
           )}
         />
       </Box>
-
-      {displayNotices(value)}
+      <Box
+        display={"flex"}
+        flexWrap={"wrap"}
+        gap={1}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        {displayNotices(value)}
+      </Box>
     </Box>
   );
 }

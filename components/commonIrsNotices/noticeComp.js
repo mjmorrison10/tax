@@ -14,7 +14,7 @@ function NoticeComp({n, i}) {
     <Accordion
     expanded={expanded === `panel${i}`}
     onChange={handleChange(`panel${i}`)}
-    sx={{ mb: 1 }}
+    sx={{  width: '65ch' }}
   >
     <AccordionSummary
       expandIcon={<ExpandMore />}
