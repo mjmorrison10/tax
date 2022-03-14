@@ -8,7 +8,7 @@ import {
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 
-function commonIrsNotices() {
+function CommonIrsNotices() {
   const notices = [
     {
       notice: "CP10 Notice",
@@ -281,4 +281,4 @@ function commonIrsNotices() {
   );
 }
 
-export default commonIrsNotices;
+export default CommonIrsNotices;
