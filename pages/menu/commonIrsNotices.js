@@ -10,6 +10,7 @@ import {
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import NoticeComp from "../../components/commonIrsNotices/noticeComp";
+import SkeleBar from "../../components/skeleBar";
 import { notices, noticesLabel } from "../../public/Settings/baseSettings";
 import TitleComp from "./components/title";
 
@@ -64,7 +65,7 @@ function CommonIrsNotices() {
       >
         Common IRS Notices
       </Typography> */}
-      <TitleComp title='Common IRS Notices' />
+      <TitleComp title="Common IRS Notices" />
 
       <Box display={"flex"} alignItems={"center"} justifyContent={"center"}>
         <Autocomplete
@@ -91,7 +92,9 @@ function CommonIrsNotices() {
         justifyContent={"center"}
         alignItems={"center"}
       >
+        <SkeleBar />
         {displayNotices(value)}
+        <SkeleBar />
       </Box>
     </Box>
   );

@@ -1,12 +1,12 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 import TitleComp from "./components/title";
+import SkeleBar from "../../components/skeleBar";
 
 function TaxRelief() {
   return (
     <Box>
-
-      <TitleComp title='The Truth about Tax Relief' />
+      <TitleComp title="The Truth about Tax Relief" />
       <Box
         display={"flex"}
         flexDirection={"column"}
@@ -54,6 +54,8 @@ function TaxRelief() {
         >
           Top Tax Relief Scams
         </Typography>
+        <SkeleBar />
+
         <Typography variant="body" color="info.dark" fontWeight={"bold"}>
           Tax Relief Scam #1 – Lead Generation Companies Posing as Tax Relief
           Experts
@@ -72,6 +74,8 @@ function TaxRelief() {
           or even the quality of service, and in some cases, they will sign up a
           consumer with no intention of servicing the client whatsoever.
         </Typography>
+        <SkeleBar />
+
         <Typography variant="body" color="info.dark" fontWeight={"bold"}>
           Tax Relief Scam #2 – Collecting Non-Refundable Payments Without Any
           Guarantees
@@ -92,6 +96,7 @@ function TaxRelief() {
           at Fidelity Tax Relief, we’ll do everything we can to help you and
           promise transparency and honesty during the process.
         </Typography>
+        <SkeleBar />
         <Typography variant="body" color="info.dark" fontWeight={"bold"}>
           Tax Relief Scam #3 – The Outright Scam Artists
         </Typography>
