@@ -1,4 +1,5 @@
 import { Check } from "@mui/icons-material";
+import { Box } from "@mui/material";
 
 export const companyName = "Tax Company";
 export const companyPhoneNumber = "(714)555-1950";
@@ -376,6 +377,235 @@ export const bankruptcyLinks = [
   {
     label: "Chapter 7 Bankruptcy",
     link: "https://www.irs.gov/businesses/small-businesses-self-employed/chapter-7-bankruptcy-liquidation-under-the-bankruptcy-code",
+  },
+];
+
+export const unfiledTaxesInfo = [
+  {
+    paragraph:
+      "Filing tax returns each year is one of the most complicated financial commitments wage earners must make. Especially if you are a small-business owner or 1099 employee, the process can be exceptionally more complicated.",
+  },
+  {
+    paragraph:
+      "While some taxpayers look forward to tax season as a time that they get to receive a sizable tax return check, others are faced with large tax bills that put them at financial risk.",
+  },
+  {
+    paragraph:
+      "When a taxpayer knows that filing their taxes will result in a tax bill they cannot afford, it is a natural reaction to forgo filing their taxes out of fear. However, not filing one’s taxes is one of the worst things that a taxpayer can do if they owe back taxes.",
+  },
+  {
+    title: "What are the Consequences for Not Filing?",
+  },
+  {
+    paragraph:
+      "The consequences for not filing your tax returns can be severe and place the delinquent taxpayer in even more trouble.",
+  },
+  {
+    paragraph: "Failure to file your taxes is considered a crime.",
+  },
+  {
+    paragraph:
+      "Refusal to file your taxes can be considered a type of tax evasion.",
+  },
+  {
+    paragraph:
+      "Nevertheless, because millions of taxpayers fail to file every year, the IRS does not prosecute each delinquent taxpayer. Instead, a tax evasion charge will only come much later after a taxpayer has actively avoided the IRS’s attempts to collect.",
+  },
+  {
+    paragraph:
+      "While the IRS may not take immediate action against delinquent taxpayers, it is best not to test your luck.",
+  },
+  {
+    paragraph:
+      "In the long-term, failure to file your taxes can result in limited loan access, seizure of assets, fines up to $25,000, and/or even jail time.",
+  },
+  {
+    paragraph:
+      "One of the most common occurrences, when taxes are unfiled or filed late, is, of course, a delayed tax refund. Even if you don’t receive any notices from the IRS initially, you will start to accrue penalties if you are late to file your taxes.",
+  },
+  {
+    paragraph:
+      "Starting on April 16th, a late penalty of 5% is taxed on to your owed amount for every month you fail to file. The IRS will begin sending their CP515, CP516, CP518, and CP515B letters in sequence until you file.",
+  },
+  {
+    paragraph: "Tax Refund Forfeiture",
+  },
+  {
+    paragraph:
+      "Yes, it is possible to still receive a refund on your back taxes. However, you only have three years from the return’s due date to claim it. If you wait longer than this, under the Statute of Limitations, you forfeit your right to claim and the U.S. Treasury will retain ownership of it.",
+  },
+  {
+    paragraph:
+      "In 2019, more than $1.4 billion in taxpayer refunds were left unclaimed.",
+  },
+  {
+    paragraph: "Late Penalties",
+  },
+  {
+    paragraph:
+      "As stated above, if you do not file your taxes and fail to file for an extension by April 15th, late penalties will start immediately the following day.",
+  },
+  {
+    paragraph:
+      "For every month you fail to pay, your taxes accrue a 5% penalty, capping at 25%.",
+  },
+  {
+    paragraph:
+      "If you have a tax bill after you file your taxes and are unable to pay by April 15th, late penalties will still be applied to your balance, but they won’t be as severe.",
+  },
+  {
+    paragraph:
+      "A variable rate of 0.5% to 1% of your unpaid taxes will be charged on your principal amount for every month that goes unpaid.",
+  },
+  {
+    paragraph:
+      "If you need more time to file your taxes, consider filing for an extension. This will extend your tax due date to October 15th; however, you will need to give yourself an ample amount of time to file the paperwork and get approval for the extension.",
+  },
+  {
+    paragraph:
+      "Bottom line: File your taxes as early as possible. Filing months before the deadline can give you time to pay off your taxes, or more time to file for an extension.",
+  },
+  {
+    title: "What To Do Next",
+  },
+  {
+    paragraph:
+      "Don’t wait until the last second; file your taxes on time to give your future self peace of mind.",
+  },
+  {
+    paragraph: `If you need assistance with any unfiled taxes or penalties, feel free to call one of our certified tax experts at ${companyPhoneNumber}.`,
+  },
+];
+
+export const backTaxesInfo = [
+  {
+    title: "What are Back Taxes?",
+    paragraph: `Back Taxes are taxes that still have a balance due, or are only partially paid after you file your tax return. Typically, if you owe Back Taxes, the IRS will send a notice with the amount you owe, a due date, and list the consequences of not paying. If you do not know how much you owe, you can contact your local IRS online to ask them.`,
+    paragraph2: `Taxpayers can have Back Taxes at the Federal, State, or even Local levels. Likewise, you can owe both personal and business liabilities.`,
+    paragraph3: `Tax debt is subject to interest, which accumulates at a constant rate. Even if you have not received a notice from the IRS, your Back Taxes will gain interest over time, and you could be stuck paying a hefty fee on top of the amount you already owe.`,
+    paragraph4: `In our economic climate, owing the IRS Back Taxes is not uncommon, just as taxpayers disregarding their tax debt is not uncommon. However, if you owe Back Taxes, do not overlook your overdue tax liability – the consequences can be severe.`,
+  },
+  {
+    title: `What to Do if You Owe Back Taxes`,
+    paragraph: `Once you know you owe Back Taxes to the IRS, you may be curious to find out what your options are.`,
+    paragraph2: `To prevent yourself from being overwhelmed with interest rates and penalties, or having your tax refund withheld by the IRS in the future, you must work to completely repay your taxes as soon as possible. The potential means of payment varies depending on how much you owe and how much you can pay.`,
+    paragraph3: <Box fontWeight={"bold"}>How to Pay Back Taxes</Box>,
+    paragraph4: `Sometimes, repayment is as simple as sending a check to your local IRS office. You may even be able to pay Back Taxes online through the IRS website, which links to a secure payment portal. Other times, paying Back Taxes can be more complicated.`,
+    paragraph5: `The IRS appreciates your efforts to pay taxes, even if they are past due. One viable option is to apply for an IRS Tax Repayment Program, but the qualifications to get approved can be difficult to navigate without the help of a professional tax representative, who can negotiate with the IRS on your behalf.`,
+    paragraph6: `If you owe taxes, help may be available in the form of various IRS repayment programs offered through the Fresh Start Initiative.`,
+  },
+  {
+    title: `IRS Repayment Programs`,
+    paragraph: `The IRS Fresh Start Initiative gives taxpayers access to a number of different programs to repay Back Taxes. Some of these programs can offer you protections from collections (with rights reserved only for those who qualify).`,
+    paragraph2: `The IRS’s primary criteria for eligibility is your financial situation. Depending on what program you qualify for, you can enter into a payment plan, temporarily halt penalties, or settle your tax debt for a fraction of the original cost.`,
+    paragraph3: `There are four main programs available to taxpayers through the Fresh Start Program:`,
+    paragraph4: `${(
+      <Box fontWeight={"bold"}>Installment Agreement</Box>
+    )} – This is a payment plan that allows taxpayers to pay an agreed-upon amount every month to the IRS. These payments go directly to the taxpayer’s overall tax debt and continue until the debt is paid in full. The IRS cannot send letters or impose penalties against you while on an installment plan. However, the IRS can continue to apply interest to your overall tax liability.`,
+    paragraph5: `${(
+      <Box fontWeight={"bold"}>Offer in Compromise</Box>
+    )} – An OIC allows taxpayers who owe Back Taxes to resolve their debt for less than the full amount. Although it is the best option available through the Fresh Start Program, the qualifications are strict. Typically, the IRS will only offer this option to taxpayers who do not have the financial resources to pay off their Back Taxes in full.`,
+    paragraph6: `${(
+      <Box fontWeight={"bold"}>Currently Non-Collectible Status</Box>
+    )} – A taxpayer can request that the IRS place them in Non-Collectible Status if they cannot pay their back taxes at the present moment, but may be able to in the future. While this status does not necessarily remove tax debt, and does not last indefinitely, it does stop all collection activities for the agreed-upon time period. Such activity may include bank levies, wage garnishments, tax liens, and threatening letters from the IRS.`,
+    paragraph7: `${(
+      <Box fontWeight={"bold"}>Penalty Abatement</Box>
+    )} – This is the term used to describe when the IRS wipes out or reduces a penalty. The IRS will only apply Penalty Abatement if the taxpayer is able to claim reasonable cause, and the IRS will request sufficient evidence to prove this cause. Proper documentation is the best form of evidence to secure a successful Penalty Abatement.`,
+  },
+  {
+    title: `Should You Seek Professional Help if You Owe Back Taxes?`,
+    paragraph: `As mentioned above, sometimes resolving tax debt is as easy as writing a check, but sometimes addressing your Back Tax debt is more complicated. We strongly encourage those struggling with significant tax debt to pursue one of the IRS Fresh Start programs; however, keep in mind that few applications for tax relief programs get accepted. The low rate of acceptance is often due to the IRS’s stringent and confusing criteria.`,
+    paragraph2: `For this reason, a taxpayer who owes Back Taxes may reach the best outcome by contacting a tax professional. A tax expert can support you in communicating with the IRS and help you determine which option offers the most effective resolution for your specific set of circumstances.`,
+  },
+  {
+    title: `Advantages of Hiring a Professional`,
+    paragraph: `The Taxpayer Bill of Rights secures the right of taxpayers to retain an authorized representative of their choice when dealing with the IRS.`,
+    paragraph2: `The IRS prefers to work with tax professionals, because it makes their job easier. This means professional tax representatives will often have a much better chance at negotiating a favorable outcome for a case. Tax experts also know the ins and outs of resolving tax debt; because they are familiar with the tax code, your representative will know what to do if you owe Back Taxes.`,
+    paragraph3: `Tax professionals bring their experience, insight, and resources to your case. An expert can examine your situation and come up with an ideal strategy, and can skillfully communicate with the IRS.`,
+    paragraph4: `With the support of a tax professional, the time commitment required to solve your Back Taxes will drastically decrease. Almost all of the resolution workload is the job of the expert. You will only be required to provide your legal representative with the appropriate documentation. You will be able to continue working, taking care of your family, and attending to other necessary matters without considerable interruption from the IRS.`,
+  },
+  {
+    title: `Resolving Back Taxes on Your Own`,
+    paragraph: `When you are considering whether to solve your tax problems alone or hire a tax professional to assist you in resolving your Back Taxes, it’s important to consider how much time and effort you are willing to dedicate to your case.`,
+    paragraph2: `For example, if you have a relatively low tax bill – $5,000 or less – you might be better off seeking an installment agreement with the IRS on your own. Should you get audited by the IRS but have all your documents, files, and records in order, and can easily verify everything on your returns, you won’t need a tax lawyer.`,
+    paragraph3: `However, without legal representation, you run the risk of saying something factually inaccurate, filling out forms incorrectly, misplacing necessary records, or getting talked into a less than ideal resolution.`,
+  },
+  {
+    title: `Owing the IRS Back Taxes`,
+    paragraph: `Owing money to your friend is one thing, but owing Back Taxes to the IRS is another matter entirely. While it is unlikely that government agents will come to knock on your door or email you at your place of work, it will become harder and harder to avoid IRS collection efforts–especially now, with both State and Federal governments pressed for funds.`,
+    paragrap2: `If you owe Back Taxes to the IRS, the best thing you can do to avoid the stress of frequent contact by the IRS is to pay your Back Taxes as soon as possible.`,
+  },
+  {
+    title: `How Do You End Up Owing the IRS?`,
+    paragraph: `One of the primary reasons taxpayers end up owing Back Taxes to the IRS (and, by extension, the Federal government) is that they paid fewer taxes during the year than they owed for their income level.`,
+    paragraph2: `Other explanations could be that you have had a recent change to your tax situation, such as beginning a new job, marriage, divorce, gaining new dependents, or your children aging out of dependent status. These changes to your filing status can affect what you withhold, which deductions you can report, and what tax forms you must sign and complete.`,
+    paragraph3: `Additionally, filing late, paying late, or simply not filing or paying at all can lead to the accumulation of Back Taxes. Eventually, you will have what is known as an Outstanding Tax Liability.`,
+  },
+  {
+    title: `How Does the IRS Know I Owe Back Taxes?`,
+    paragraph: `Each year, the Federal government claims it loses millions of dollars in tax revenue due to unpaid taxes. To compensate for their losses, the government decided to allocate more resources to the IRS for enforcement. Today, the IRS is the world’s most powerful collection agency.`,
+    paragraph2: `The IRS uses a computerized Information Returns Program (IRP), which matches information documents against the tax returns you have filed. Should their computer search fail to find a return, the IRS will begin their Taxpayer Delinquency Investigation (TDI).`,
+    paragraph3: `We strongly advise that you do not attempt to wait out the IRS. Ultimately, they will find out if you owe Back Taxes. The longer you wait, the larger your tax debt will grow, so it is best to resolve your tax debt as soon as possible.`,
+  },
+  {
+    title: `Owing Back State Taxes`,
+    paragraph: `Owing Back Taxes to the State government is more complicated than owing to the Federal government.`,
+    paragraph2: `Forty-three states have a State income tax, and State income tax codes differ between States, as well as from Federal tax laws. These differences can be minor or significant. States can also charge sales taxes, unlike the Federal government.`,
+  },
+  {
+    title: `How Do You End Up Owing the State?`,
+    paragraph: `Taxpayers commonly end up in tax debt to State governments because they do not have enough withholdings or deductions. These taxpayers have more income that needs to be taxed, causing a build-up of unpaid taxes. Additionally, taxpayers who earn income in multiple states sometimes forget to file several returns. Not keeping track of changes in one’s taxable income or tax status is also linked to an outstanding balance with the State government.`,
+  },
+  {
+    title: `Owing Back State Taxes is More Complicated Than Owing the IRS`,
+    paragraph: `It is more challenging to obtain a tax resolution with the State than it is with the IRS. The discrepancy is because the Federal government forces the IRS to offer tax relief options to delinquent taxpayers. However, the same rules do not apply to the individual States, which require their residents to pay income tax.`,
+    paragraph2: `The IRS handles taxpayers from all 50 States, while a single State is only concerned with its population. This often means an individual State has the time and resources to pursue harsher compromise tactics.`,
+    paragraph3: `A State only wants taxpayers to pay their tax debt in full. Most tax resolutions with the States are Installment Agreements, and rarely, Offers in Compromise. If you owe State taxes and need help, contact a tax professional.`,
+  },
+  {
+    title: `What Happens if You Owe Back Taxes?`,
+    paragraph: `Owing Back Taxes is not without penalties. There are various consequences that the IRS uses against taxpayers who do not repay their Back Taxes.`,
+  },
+  {
+    title: `Assessment of Interest and Penalties`,
+    paragraph: `A tax debt balance compounds over time due to interest and penalties. It is not unusual for these additional charges to total as much as 50% of the original tax liability.`,
+    paragraph2: `${(
+      <Box fontWeight={"bold"}>Interest</Box>
+    )} – The IRS considers a Back Tax balance to be the equivalent of a loan, and will charge interest on the tax amount due. The interest rate, which changes every three months, is calculated by taking the Federal short-term rate and adding 3%`,
+    paragraph3: `${(
+      <Box fontWeight={"bold"}>Penalties</Box>
+    )} – A failure-to-pay penalty is assessed at the rate of 0.25% to 1% of the Back Tax amount due for each month that there is an unpaid balance. The maximum amount this penalty can reach is 25% of the original tax amount owed.`,
+  },
+  {
+    title: `Compounded Interest`,
+    paragraph: `The IRS uses Compounding Interest to encourage taxpayers who owe Back Taxes to pay off their debt promptly. Compound Interest is interest on an outstanding tax liability, calculated based on the initial principal amount and the accumulated interest.`,
+    paragraph2: `Often, taxpayers let their debt sit idle for years, unaware that it is steadily growing in the background. To put Compounded Interest into perspective, consider this example:`,
+    paragraph3: `A taxpayer owes $10,000 in Back Taxes to the IRS:`,
+    list: `In 1 year, the IRS will have added over ${(
+      <Box fontWeight={"bold"}>$600</Box>
+    )} to the total debt.`,
+    list2: `In 3 years, the IRS will have added at least ${(
+      <Box fontWeight={"bold"}>$2,000</Box>
+    )} to the total debt.`,
+    list3: `In 5 years, the IRS will have added more than ${(
+      <Box fontWeight={"bold"}>$3,500</Box>
+    )} to the total debt.`,
+  },
+  {
+    title: `Enforced Collection Activities`,
+    paragraph: `The IRS begins their Back Tax collection process with passive techniques, such as issuing an IRS letter or an IRS Notice. However, the longer the tax bill is left unpaid, the more aggressive the collection methods will become. Eventually, the IRS may file a tax lien, issue a tax levy, or initiate a wage garnishment.`,
+    paragraph2: `Liens – A tax lien is a method the IRS uses to ensure that they collect by holding an ownership stake against one or more of a taxpayer’s assets. The IRS can place a lien on a bank account, a property, or any other asset of significant value.`,
+    paragraph3: `Levies – A levy is the actual seizure of a taxpayer’s property to satisfy a tax debt. The IRS can levy physical assets, bank accounts, retirement accounts, dividends, wages, and other assets. A levy is one of the final steps the IRS will deploy in its attempt to collect from those who owe Back Taxes. Usually, it is exercised as a last resort after other collection attempts have failed.`,
+    paragraph4: `Wage Garnishment – A wage garnishment is an aggressive collection technique used by the IRS to collect back taxes. When the agency issues a wage garnishment, it instructs the delinquent taxpayer’s employer to deduct a predetermined amount from each paycheck and forward that amount to the IRS directly.`,
+    paragraph5: `In summary, here are a few key points you can take away from the information above:`,
+    list: `Back Taxes are unpaid taxes that need to be rectified.`,
+    list2: `Back Taxes can lead to interest and retributions from the IRS, and usually have deadlines attached to them.`,
+    list3: `Negligence of your Back Taxes can lead to wage garnishment, tax liens, levies, or even criminal charges.`,
+  },
+  {
+    title: `Do You Owe the IRS Back Taxes and Need Help?`,
+    paragraph: `If you have Back Taxes, please call one of our tax relief experts at ${companyPhoneNumber}. They can guide you through our process and get you headed towards financial stability again.`,
+    paragraph2: `For additional tax relief information and current news, check out our site blog or follow us on social media for more content!`,
   },
 ];
 
