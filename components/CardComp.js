@@ -35,10 +35,25 @@ function CardComp({ question = "question", answer = "answer" }) {
   };
 
   return (
-    <Card sx={{ maxWidth: "50ch" }}>
+    <Card
+      raised
+      sx={{
+        maxWidth: "50ch",
+        minHeight: 175,
+        minWidth: 425,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
       <CardHeader title={question} />
 
-      <Box display={"flex"} width={"100%"} justifyContent={"center"}>
+      <Box
+        display={"flex"}
+        width={"100%"}
+        justifyContent={"center"}
+        bgcolor={"info.light"}
+      >
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}

@@ -58,16 +58,20 @@ function frequentlyAskedQuestions() {
   ];
 
   return (
-
-<Box>
-  <TitleComp title='Frequently Asked Questions' />
-  <Box display={'flex'} gap={2} flexWrap={'wrap'} alignItems={'center'} justifyContent={'center'} >
-  
+    <Box>
+      <TitleComp title="Frequently Asked Questions" />
+      <Box
+        display={"flex"}
+        gap={2}
+        flexWrap={"wrap"}
+        alignItems={"center"}
+        justifyContent={"center"}
+      >
         {QA.map((q, i) => (
           <CardComp question={q.question} answer={q.answer} key={i} />
         ))}
       </Box>
-</Box>
+    </Box>
   );
 }
 
