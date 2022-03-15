@@ -10,7 +10,7 @@ function WhenYouNeedATaxExpert() {
       <Box
         display={"flex"}
         flexDirection={"column"}
-        sx={{ width: "75ch", margin: "0 auto" }}
+        sx={{ maxWidth: "75ch", margin: "0 auto" }}
       >
         <Typography
           variant="h4"

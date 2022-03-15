@@ -24,12 +24,12 @@ const theme = createTheme({
   },
 });
 
-theme.typography.h3 = {
-  fontSize: "3rem",
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "2rem",
-  },
-};
+// theme.typography.h3 = {
+//   fontSize: "3rem",
+//   [theme.breakpoints.down("sm")]: {
+//     fontSize: "2rem",
+//   },
+// };
 
 function MyApp({ Component, pageProps }) {
   return (

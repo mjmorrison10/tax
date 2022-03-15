@@ -14,6 +14,7 @@ function TitleComp({ title }) {
       marginBottom={1}
       borderRadius={1}
       sx={{
+        overflowWrap: 'break-word',
         color: blue[50],
       }}
     >

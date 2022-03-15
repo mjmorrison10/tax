@@ -20,7 +20,7 @@ function TaxLiabilitiesAndBankruptcy() {
             flexDirection={"column"}
             gap={1}
             m={"0 auto"}
-            sx={{ width: "85ch" }}
+            sx={{ maxWidth: "85ch" }}
           >
             <Typography
               variant="h4"

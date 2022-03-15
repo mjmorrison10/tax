@@ -12,6 +12,7 @@ function backTaxes() {
           display={"flex"}
           flexDirection={"column"}
           gap={1}
+          key={i}
           m={"0 auto"}
           sx={{ maxWidth: { xs: "85ch", md: "80%" } }}
         >
