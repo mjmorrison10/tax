@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
 import TitleComp from "./components/title";
-import SkeleBar from "../../components/skeleBar";
+import SkeleBar from "../../components/SkeleBar";
 
 function TaxRelief() {
   return (

@@ -10,7 +10,7 @@ import {
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import NoticeComp from "../../components/commonIrsNotices/noticeComp";
-import SkeleBar from "../../components/skeleBar";
+import SkeleBar from "../../components/SkeleBar";
 import { notices, noticesLabel } from "../../public/Settings/baseSettings";
 import TitleComp from "./components/title";
 

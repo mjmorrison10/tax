@@ -17,7 +17,7 @@ import {
 } from "@mui/icons-material";
 import TestimonialsComp from "../../components/testimonialsComp";
 import TitleComp from "./components/title";
-import SkeleBar from "../../components/skeleBar";
+import SkeleBar from "../../components/SkeleBar";
 import { companyName } from "../../public/Settings/baseSettings";
 
 const checkmark = (
