@@ -53,6 +53,8 @@ export default function Home(props) {
   return (
     <Box>
       <Carousel
+      fullHeightHover={true}
+      navButtonsAlwaysVisible={true}
         sx={{
           minHeight: { xs: "fit-content" },
         }}
