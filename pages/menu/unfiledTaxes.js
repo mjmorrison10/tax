@@ -15,11 +15,11 @@ function unfiledTaxes() {
       >
         {unfiledTaxesInfo.map((info, i) =>
           info.title ? (
-            <Typography variant="h4" component={"h2"}>
+            <Typography variant="h4" component={"h2"} key={i} color="info.dark">
               {info.title}
             </Typography>
           ) : (
-            <Typography variant="body" gutterBottom>
+            <Typography variant="body" gutterBottom key={i}>
               {info.paragraph}
             </Typography>
           )

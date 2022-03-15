@@ -1,12 +1,12 @@
 import React from 'react'
 import PageComingSoon from '../../components/pageComingSoon'
 
-function contactUs() {
+function OurGuarantee() {
   return (
     <div>
-      <PageComingSoon />
+        <PageComingSoon />
     </div>
   )
 }
 
-export default contactUs
+export default OurGuarantee

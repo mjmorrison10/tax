@@ -1,8 +1,11 @@
 import React from 'react'
+import PageComingSoon from '../components/pageComingSoon'
 
 function getStarted() {
   return (
-    <div>Get Started page links to the Google Form! :)</div>
+    <div>
+      <PageComingSoon label='This page links to Google Forms' />
+    </div>
   )
 }
 

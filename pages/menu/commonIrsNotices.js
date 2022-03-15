@@ -46,7 +46,7 @@ function CommonIrsNotices() {
         <NoticeComp i={1} n={findNotice} />
         // </Box>
       );
-    } else {
+    } else {  
       return notices.map((n, i) => (
         // <Box key={i} display={"flex"} flexDirection={"column"}>
         <NoticeComp key={i} i={i} n={n} />

@@ -79,6 +79,7 @@ export default function SplitButton(props) {
         role={undefined}
         transition
         disablePortal
+
         style={{ zIndex: 11 }}
       >
         {({ TransitionProps, placement }) => (
@@ -102,6 +103,7 @@ export default function SplitButton(props) {
                     >
                       <MenuItem
                         key={option}
+                        divider={true}
                         selected={index === selectedIndex}
                         onClick={(event) => handleMenuItemClick(event, index)}
                       >

@@ -1,8 +1,11 @@
 import React from 'react'
+import PageComingSoon from '../../components/pageComingSoon'
 
 function taxPreparationAndResolution() {
   return (
-    <div>taxPreparationAndResolution</div>
+    <div>
+      <PageComingSoon />
+    </div>
   )
 }
 

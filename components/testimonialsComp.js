@@ -23,6 +23,7 @@ function TestimonialsComp({ margin, title = 'Our Clients sees the value in us!' 
         component={"h2"}
         color="info.main"
         textAlign={"center"}
+        gutterBottom
       >
         {title}
         {/* Our Clients sees the value in us! */}
