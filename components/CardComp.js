@@ -27,11 +27,13 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-function CardComp({ question = "question", answer = "answer" }) {
+function CardComp({ question = "question", answer = "answer", answerTitle }) {
   const [expanded, setExpanded] = React.useState(false);
+  const [borderRadius, setBorderRadius] = React.useState(null)
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
+    !expanded ? setBorderRadius(2) : setBorderRadius(null)
   };
 
   return (
@@ -39,20 +41,22 @@ function CardComp({ question = "question", answer = "answer" }) {
       raised
       sx={{
         maxWidth: "50ch",
-        minHeight: {xs: 'fit-content', md: 175},
-        minWidth: {xs: '95%', sm: 425},
+        minHeight: { xs: "fit-content", md: 175 },
+        minWidth: { xs: "95%", sm: 425 },
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
       }}
     >
-      <CardHeader title={question} />
+      <CardHeader title={question} subheader={answerTitle} />
+      {/* <CardHeader title={answerTitle} /> */}
 
       <Box
         display={"flex"}
         width={"100%"}
         justifyContent={"center"}
         bgcolor={"info.light"}
+        borderRadius={borderRadius}
       >
         <ExpandMore
           expand={expanded}

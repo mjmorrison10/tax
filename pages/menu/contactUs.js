@@ -4,7 +4,7 @@ import PageComingSoon from '../../components/pageComingSoon'
 function contactUs() {
   return (
     <div>
-      <PageComingSoon />
+      <PageComingSoon label='Contact Us directs to Google Form' />
     </div>
   )
 }

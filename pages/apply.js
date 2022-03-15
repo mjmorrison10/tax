@@ -25,6 +25,7 @@ const typographyStyle = {
 function apply() {
   return (
     <Box sx={style}>
+      
       <Typography variant="h4" component="h1" gutterBottom sx={typographyStyle}>
         Are you interested in tax relief?
       </Typography>

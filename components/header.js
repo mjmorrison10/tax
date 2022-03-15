@@ -78,7 +78,7 @@ const objButton = [
     title: "about us",
     menuTitle: [
       "About Us",
-      "Why Choose Us",
+      // "Why Choose Us",
       "Our Guarantee",
       "Contact Us",
     ],

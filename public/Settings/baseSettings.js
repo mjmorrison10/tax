@@ -618,3 +618,34 @@ export const checkmark = (
     }}
   />
 );
+
+export const guaranteeInfo = [
+  {
+    title: "100% Resolution Guarantee or Your Money Back",
+    paragraphTitle:
+      "As a TaxRise resolution client, we guarantee enrollment into a tax resolution or your money back.",
+    paragraph:
+      "TaxRise cannot guarantee a specific result with the IRS or any state agency, nor do we guarantee to obtain any result within any particular period of time. The tax debt resolution services are subject to IRS and state agency taxpayer eligibility requirements, based on IRS and/or state agency rules and timelines. The timing and availability of a tax resolution with the IRS and/or state tax authority is contingent upon you providing complete, accurate, and timely information and any additional materials necessary to finalize the resolution.",
+  },
+  {
+    title: "100% Compliance Guarantee",
+    paragraphTitle:
+      "Upon completion of our services, we guarantee that you will be compliant with all required income tax filings for the contracted tax years and filings.",
+    paragraph:
+      "If after completion of TaxRise resolution services, you receive a notice of noncompliance for any of the contracted tax years and filings, and if that noncompliance was a result of TaxRise’s error, we will amend our work at no extra cost until you are 100% compliant.",
+  },
+  {
+    title: "No-Cost Rejection Appeal Guarantee",
+    paragraphTitle:
+      "In the event that an Offer in Compromise is submitted to settle your tax liability, and that offer is denied or rejected, TaxRise will appeal the decision at no extra cost to you.",
+    paragraph:
+      "Not every client qualifies as an Offer in Compromise candidate. If TaxRise recommends moving forward with an offer request and the IRS rejects our settlement, TaxRise will immediately begin the appeal process. To complete an appeal, the IRS may require additional documentation from that taxpayer and is contingent on the taxpayer’s participation and cooperation. Should the rejection be sustained on the appeal, TaxRise will still enroll you in the next best resolution option.",
+  },
+  {
+    title: "100% Accurate Calculations Guarantee",
+    paragraphTitle:
+      "If you are required to pay the IRS or State tax authority a penalty due to a TaxRise calculation error on your tax return, we will refund you the amount paid for tax preparation and submission for that tax year. In addition, we will amend the return and refile it at no additional cost.",
+    paragraph:
+      "*Eligibility Requirement: This guarantee is contingent upon the receipt of complete, accurate, and timely documentation from the taxpayer in order to prepare and submit the tax return(s).",
+  },
+];
