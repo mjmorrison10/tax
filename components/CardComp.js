@@ -39,8 +39,8 @@ function CardComp({ question = "question", answer = "answer" }) {
       raised
       sx={{
         maxWidth: "50ch",
-        minHeight: 175,
-        minWidth: 425,
+        minHeight: {xs: 'fit-content', md: 175},
+        minWidth: {xs: '95%', sm: 425},
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
