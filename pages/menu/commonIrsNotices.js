@@ -43,7 +43,7 @@ function CommonIrsNotices() {
 
       return (
         // <Box display={"flex"} flexDirection={"column"}>
-        <NoticeComp key={i} i={1} n={findNotice} />
+        <NoticeComp i={1} n={findNotice} />
         // </Box>
       );
     } else {

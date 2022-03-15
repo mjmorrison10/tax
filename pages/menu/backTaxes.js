@@ -15,7 +15,13 @@ function backTaxes() {
           m={"0 auto"}
           sx={{ maxWidth: { xs: "85ch", md: "80%" } }}
         >
-          <Typography variant="h4" component={"h2"} color="info.dark" mt={2} gutterBottom >
+          <Typography
+            variant="h4"
+            component={"h2"}
+            color="info.dark"
+            mt={2}
+            gutterBottom
+          >
             {info.title}
           </Typography>
           <Typography variant="body">{info.paragraph}</Typography>
