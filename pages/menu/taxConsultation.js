@@ -18,6 +18,7 @@ import {
 import TestimonialsComp from "../../components/testimonialsComp";
 import TitleComp from "./components/title";
 import SkeleBar from "../../components/skeleBar";
+import { companyName } from "../../public/Settings/baseSettings";
 
 const checkmark = (
   <Check
@@ -507,16 +508,16 @@ function TaxConsultation() {
           Complete Your Free Tax Consultation Today
         </Typography>
         <Typography variant="body">
-          Take the first step in your journey to tax relief. Contact TaxRise
-          today for a free tax consultation phone call.
+          Take the first step in your journey to tax relief. Contact{" "}
+          {companyName} today for a free tax consultation phone call.
         </Typography>
         <Typography variant="body">
           For more information and new 2022 tax relief updates, check out our
           tax blog or follow us on Facebook and Twitter!
         </Typography>
         <SkeleBar />
-        <TestimonialsComp title={"Testimonials"} />
       </Box>
+      <TestimonialsComp title={"Testimonials"} />
     </Box>
   );
 }
