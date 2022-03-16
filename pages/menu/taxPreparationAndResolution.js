@@ -75,7 +75,6 @@ function taxPreparationAndResolution() {
             )}
           </Box>
         ))}
-        <PageComingSoon />
       </Box>
     </Box>
   );
