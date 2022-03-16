@@ -16,11 +16,11 @@ export default function SplitButton(props) {
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   let text;
-  const color = props.btnColor
-  
-  console.log(
-    props.setBtnColor
-  );
+  const color = props.btnColor;
+
+  // console.log(
+  //   props.setBtnColor
+  // );
 
   const handleClick = (e) => {
     text = e.target.innerText;
@@ -43,6 +43,7 @@ export default function SplitButton(props) {
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
+    console.log(open);
     !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
     props.menuOptions.length === 0 && props.isModalOpen ? props.modal() : null;
   };
@@ -52,6 +53,7 @@ export default function SplitButton(props) {
       return;
     }
 
+    !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
     setOpen(false);
   };
 

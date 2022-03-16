@@ -14,7 +14,7 @@ function TestimonialsComp({ margin, title = 'Our Clients sees the value in us!' 
       setCurrentPage(numb);
     }
   }
-  console.log(title);
+  // console.log(title);
 
   return (
     <Box my={margin}>
