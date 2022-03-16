@@ -649,3 +649,116 @@ export const guaranteeInfo = [
       "*Eligibility Requirement: This guarantee is contingent upon the receipt of complete, accurate, and timely documentation from the taxpayer in order to prepare and submit the tax return(s).",
   },
 ];
+
+export const taxPrepInfo = [
+  {
+    title: `Tax Preparation`,
+  },
+  {
+    paragraph: `Filing your taxes each year can be a daunting task. You can try the “Do-It-Yourself” method and risk missing out on substantial deductions that you deserve…or worse – you could end up inadvertently owing money you don’t have. Or, you can have your taxes correctly done the first time – guaranteed.`,
+  },
+  {
+    title: "Why Choose TaxRise for Your Individual Tax Preparation",
+    paragraph:
+      "At TaxRise, our team works every day fighting the IRS and getting the best possible deals for our clients.",
+    paragraph2:
+      "Whether you currently owe the IRS, are worried that filing your taxes will bring about an unwanted tax bill, or are just looking for your biggest refund possible, TaxRise will fight for your money every step of the way.",
+    paragraph3:
+      "Licensed, In-House Tax Professionals – At TaxRise, we have an entire floor dedicated to our tax professionals who will tirelessly work on your individual tax preparation. Our tax preparers, CPAs, and tax attorneys know the tax code inside and out. Rest assured, we will file your taxes accurately the first time.",
+    paragraph4:
+      "Free Financial Consultation – All of our clients receive a free financial consultation with a tax specialist to determine the best course of action for their specific situation. At TaxRise, we don’t believe in cookie-cutter tax prep. Every case is different, so every client receives specialized attention from our tax preparers.",
+    paragraph5:
+      "A+ Rating on the Better Business Bureau – We understand the importance of customer service and transparency, which is why we’re proud of our A+ rating on the BBB.",
+  },
+  {
+    title: "Self-Employed / 1099 Misfiling",
+    paragraph:
+      "Many Americans find that they have to supplement their income with 1099 types of employment. Typically, the taxpayer, unaccustomed to the 1040-ES form and the various procedures associated with self-employed filing, will make a mistake and incur a penalty.",
+    paragraph2:
+      "Filing as self-employed is considerably more complicated and involved than most other forms of filing. The discrepancy exists because self-employed individuals generally are required to file an annual return and pay estimated tax quarterly.",
+  },
+  {
+    title: "How Self-Employed Taxpayers Must File",
+    paragraph:
+      "It is the legal obligation for those classified as self-employed to file annual returns and pay estimated taxes quarterly. The quarterly payment of estimated taxes can cause most mistakes for filers.",
+    paragraph2:
+      "In addition to your income tax, you must pay an SE (self-employed) tax. The SE tax covers Medicare and Social Security – typically withheld from regular wages.",
+    paragraph3:
+      "If you are filing as self-employed for the first time, and you haven’t yet made any money from your business – you must give an estimation of how much you expect to earn from the upcoming year.",
+  },
+  {
+    title: `Unfiled and Misfiled Consequences`,
+    paragraph: `Most Americans don’t realize how seriously the IRS takes tax filing mistakes, let alone how they treat unfiled taxes.`,
+    paragraph2: `The consequences for not filing your tax returns can be severe and place the delinquent taxpayer in even more trouble.`,
+    paragraph3: `Failure to file your taxes is considered a crime.`,
+    paragraph4: `Refusal to file your taxes can be considered a type of tax evasion.`,
+    paragraph5: `While the IRS may not take immediate action against delinquent taxpayers, it is best not to test your luck. The most common consequences for not filing your taxes include delayed tax refunds and late penalties. Long-term punishments include limited loan access, seizure of assets, and fines.`,
+    paragraph6: `Bottom line, file your taxes as early as possible. Filing months before the deadline can give you time to pay off your taxes or more time to file for an extension.`,
+  },
+  {
+    title: `What Do You Need To File Individual Taxes?`,
+    paragraph: `Filing your taxes can be overwhelming, but with TaxRise, it doesn’t have to be. We will assign a Case Manager who will walk you through the process and help you get all of the necessary documentation in order.`,
+    paragraph2: `Here is a list of items you may find helpful when preparing your individual tax returns:`,
+    list: `Your social security number`,
+    list2: `Dates of birth and social security numbers for spouse and dependents`,
+    list3: `The income of other adults in your home`,
+    list4: `Proof of Source of Income`,
+    list5: `Savings & Investments of Dividends`,
+    list6: `Other Income & Losses`,
+  },
+  {
+    title: `How To Get Started`,
+    paragraph: `Let our tax pros handle your individual tax filing. Call a specialist today at ${companyPhoneNumber}`,
+  },
+  {
+    title: `Tax Resolution`,
+  },
+  {
+    paragraph: `It’s common for taxpayers to feel that there is a dead-end when they are in debt to the IRS. The truth is that you can and should come to a compromise with IRS. It’s the job of a tax professional to help you resolve your tax issues within your means.`,
+  },
+  {
+    paragraph: `Millions of Americans fall victim to tax debt, and they tend to overpay or miss out on opportunities for reductions and forgiveness when they handle their tax issues themselves. That’s where TaxRise comes in, acting as your liaison.`,
+  },
+  {
+    title: `Tax Issues`,
+    paragraph: `In a perfect world, everyone would be able to pay their back taxes in full, file their late taxes, and resolve all IRS penalties easily and painlessly.`,
+    paragraph2: `However, tax resolution is not something you can accomplish in an afternoon.`,
+    paragraph3: `By neglecting your tax duties, not only will you accrue interest (sometimes up to 50% of what you owe), but you will be subject to much worse penalties.`,
+    paragraph4: `The IRS has the most aggressive collection tactics, so you don’t want to avoid them for too long. Over time, you could find yourself with garnished paychecks or even risk having your property seized.`,
+  },
+  {
+    title: `Facing the IRS Alone`,
+    paragraph: `If you’re in a situation where you will inevitably have to deliberate with the IRS: you may be wondering if you should take them on by yourself or enlist professional assistance.`,
+    paragraph2: `No law or rule prohibits you from debating with the IRS on your own. However, taking on the IRS is no minor task; consider these factors first:`,
+  },
+  {
+    title: `Instances Where You Should Go Alone`,
+    paragraph: `Two important considerations are the monetary cost and how much time and effort you are willing to dedicate to your case.`,
+    paragraph2: `For example, if you have a relatively low tax bill – $5,000 or less – you might be better off getting into an installment agreement with the IRS. You will save yourself money by forgoing a tax expert.`,
+    paragraph3: `Furthermore, should you get audited by the IRS but have all your documents, files, and records in order and can verify everything on your returns, you won’t need a professional.`,
+  },
+  {
+    title: `Possible Downsides of Going Alone`,
+    paragraph: `While you will save yourself money, deliberating without a representative has its risks. For example, you risk saying something factually inaccurate, getting overly emotional, or getting talked into a less than ideal resolution.`,
+  },
+  {
+    title: `Facing the IRS With A Tax Expert`,
+    paragraph: `You may not realize it, but you might not owe as much as you’d expect. Our team of skilled professionals will often find ways to get you on a payment plan or even reduce the balance owed. Depending on your individual situation, you may not have to pay anything at all.`,
+  },
+  {
+    title: `The Benefits of Choosing a Professional`,
+    paragraph: `Your time commitment will drastically decrease when the resolution is not your responsibility. A significant portion of the workload falls on the tax expert. Typically, all you need to do is provide them with the necessary documentation in a timely manner.`,
+    paragraph2: `A tax expert will also fare favorably with the IRS. The IRS prefers to work with tax professionals because it makes their job easier – as they both are at comparable levels in tax law knowledge.`,
+    paragraph3: `Tax experts bring experience, insight, and resources to your case. A practiced eye can examine your situation and come up with an ideal strategy. Plus, an expert can skillfully dialogue and communicate with the IRS.`,
+  },
+  {
+    title: `How TaxRise works to Resolve your Debt`,
+    paragraph: `Our experts will take the time to learn every detail of your case so that they can successfully resolve your debt. The exact means by which you will achieve debt resolution is dependent on circumstance. Factoring things in such as how much you owe, how long you’ve had this debt, and what you’re able to pay will determine what kind of assistance you can receive.`,
+    paragraph2: `You are capable of resolving your debt on your own without the use of a professional. However, if you have been struggling with this issue for some time, perhaps our pros at TaxRise will catch something that you missed, or maybe we can parley for a better resolution for you.`,
+    paragraph3: `Compare utilizing a tax software as opposed to a tax attorney.`,
+  },
+  {
+    title: `Choose TaxRise To Represent You`,
+    paragraph: `You can gain all of our knowledge, skill, and resources by contacting TaxRise today or after taking our brief survey.`,
+  },
+];
