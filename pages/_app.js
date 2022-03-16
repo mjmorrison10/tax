@@ -7,6 +7,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { Fab, Fade, Tooltip, Typography } from "@mui/material";
+import { ArrowDropUp } from "@mui/icons-material";
 
 const theme = createTheme({
   palette: {
@@ -50,6 +52,29 @@ function MyApp({ Component, pageProps }) {
             <Footer />
           </Box>
         </Container>
+        <Fab
+          color="info"
+          size="small"
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          }}
+          sx={{
+            position: "sticky",
+            bottom: "1rem",
+            left: "1rem",
+            display: { xs: "none", sm: "flex" },
+          }}
+        >
+          <Tooltip
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 600 }}
+            title="Scroll to Top"
+            placement="top-end"
+          >
+            <ArrowDropUp fontSize="large" />
+          </Tooltip>
+          {/* <Typography variant="button">Scroll to Top</Typography> */}
+        </Fab>
       </Box>
     </ThemeProvider>
   );

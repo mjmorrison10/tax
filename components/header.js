@@ -128,7 +128,7 @@ const style = {
 
 function Header(props) {
   const [open, setOpen] = useState(false);
-  const [btnColor, setBtnColor] = useState('info');
+  const [btnColor, setBtnColor] = useState("info");
 
   const activateModal = () => {
     !open ? setOpen(true) : setOpen(false);
@@ -201,7 +201,8 @@ function Header(props) {
                       isModalOpen={open}
                       modal={activateModal}
                       variant={`contained`}
-                      color={btnColor}
+                      btnColor={btnColor}
+                      setBtnColor={setBtnColor}
                       key={i}
                       title={`${btn.title}`}
                       menuOptions={btn.menuTitle}

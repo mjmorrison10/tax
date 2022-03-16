@@ -43,13 +43,13 @@ export default function SplitButton(props) {
     // console.log(event.target.innerText);
     setSelectedIndex(index);
     setOpen(false);
-    handleColorChange()
+    handleColorChange();
   };
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
     console.log(open);
-    handleColorChange()
+    handleColorChange();
     // !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
     props.menuOptions.length === 0 && props.isModalOpen ? props.modal() : null;
   };
@@ -59,7 +59,7 @@ export default function SplitButton(props) {
       return;
     }
 
-    handleColorChange()
+    handleColorChange();
     // !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
     setOpen(false);
   };
