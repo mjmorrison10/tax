@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { blue } from "@mui/material/colors";
 import React from "react";
 import Link from "next/link";
+import PageComingSoon from '../components/pageComingSoon'
 
 export const style = {
   backgroundColor: blue[300],
@@ -35,6 +36,7 @@ function apply() {
           Get Started
         </Button>
       </Link>
+      <PageComingSoon label='This page links to Google Forms' />
     </Box>
   );
 }
