@@ -15,6 +15,7 @@ function taxPreparationAndResolution() {
               <Typography
                 gutterBottom
                 textAlign={"center"}
+                color="info.dark"
                 mt={3}
                 variant={`${!info.paragraph ? "h3" : "h5"}`}
                 component={`${!info.paragraph ? "h2" : "h3"}`}
