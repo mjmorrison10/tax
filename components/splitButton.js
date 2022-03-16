@@ -16,6 +16,11 @@ export default function SplitButton(props) {
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   let text;
+  const color = props.btnColor
+  
+  console.log(
+    props.setBtnColor
+  );
 
   const handleClick = (e) => {
     text = e.target.innerText;
@@ -38,6 +43,7 @@ export default function SplitButton(props) {
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
+    !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
     props.menuOptions.length === 0 && props.isModalOpen ? props.modal() : null;
   };
 
@@ -49,6 +55,7 @@ export default function SplitButton(props) {
     setOpen(false);
   };
 
+  console.log(color);
   return (
     <React.Fragment>
       {/* <Link
@@ -62,7 +69,7 @@ export default function SplitButton(props) {
           handleClick(e);
         }}
         variant={props.variant}
-        color={props.color}
+        color={color}
         // children={props.children}
         ref={anchorRef}
         aria-label="split button"
@@ -79,7 +86,6 @@ export default function SplitButton(props) {
         role={undefined}
         transition
         disablePortal
-
         style={{ zIndex: 11 }}
       >
         {({ TransitionProps, placement }) => (

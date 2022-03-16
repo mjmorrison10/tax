@@ -128,6 +128,7 @@ const style = {
 
 function Header(props) {
   const [open, setOpen] = useState(false);
+  const [btnColor, setBtnColor] = useState('info');
 
   const activateModal = () => {
     !open ? setOpen(true) : setOpen(false);
@@ -200,7 +201,7 @@ function Header(props) {
                       isModalOpen={open}
                       modal={activateModal}
                       variant={`contained`}
-                      color={"info"}
+                      color={btnColor}
                       key={i}
                       title={`${btn.title}`}
                       menuOptions={btn.menuTitle}
@@ -240,7 +241,8 @@ function Header(props) {
               {objButton.map((btn, i) => (
                 <SplitButton
                   variant={`contained`}
-                  color={"info"}
+                  btnColor={btnColor}
+                  setBtnColor={setBtnColor}
                   key={i}
                   title={`${btn.title}`}
                   menuOptions={btn.menuTitle}
