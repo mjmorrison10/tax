@@ -32,6 +32,10 @@ export default function SplitButton(props) {
   //   console.info(`You clicked ${props.menuOptions[selectedIndex]}`);
   // };
 
+  const handleColorChange = () => {
+    !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
+  };
+
   const handleMenuItemClick = (event, index) => {
     props.isModalOpen ? props.modal() : null;
     text = event.target.innerText;
@@ -39,12 +43,14 @@ export default function SplitButton(props) {
     // console.log(event.target.innerText);
     setSelectedIndex(index);
     setOpen(false);
+    handleColorChange()
   };
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
     console.log(open);
-    !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
+    handleColorChange()
+    // !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
     props.menuOptions.length === 0 && props.isModalOpen ? props.modal() : null;
   };
 
@@ -53,7 +59,8 @@ export default function SplitButton(props) {
       return;
     }
 
-    !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
+    handleColorChange()
+    // !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
     setOpen(false);
   };
 
