@@ -76,7 +76,7 @@ function TaxConsultation() {
 
         <SkeleBar />
 
-        <Accordion>
+        <Accordion sx={{ backgroundColor: "transparent" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -117,7 +117,7 @@ function TaxConsultation() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion>
+        <Accordion sx={{ backgroundColor: "transparent" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -227,7 +227,7 @@ function TaxConsultation() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion>
+        <Accordion sx={{ backgroundColor: "transparent" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -281,7 +281,7 @@ function TaxConsultation() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion>
+        <Accordion sx={{ backgroundColor: "transparent" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -326,7 +326,7 @@ function TaxConsultation() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion>
+        <Accordion sx={{ backgroundColor: "transparent" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -375,7 +375,7 @@ function TaxConsultation() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion>
+        <Accordion sx={{ backgroundColor: "transparent" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -401,7 +401,7 @@ function TaxConsultation() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion>
+        <Accordion sx={{ backgroundColor: "transparent" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
@@ -443,7 +443,7 @@ function TaxConsultation() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion>
+        <Accordion sx={{ backgroundColor: "transparent" }}>
           <AccordionSummary
             expandIcon={<ExpandMore />}
             aria-controls="panel1a-content"
