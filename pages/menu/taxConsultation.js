@@ -18,7 +18,11 @@ import {
 import TestimonialsComp from "../../components/testimonialsComp";
 import TitleComp from "./components/title";
 import SkeleBar from "../../components/SkeleBar";
-import { companyName } from "../../public/Settings/baseSettings";
+import {
+  companyName,
+  openingHoursInfo,
+} from "../../public/Settings/baseSettings";
+import PageComingSoon from "../../components/pageComingSoon";
 
 const checkmark = (
   <Check
@@ -37,6 +41,7 @@ const five = <Looks5Outlined sx={{ color: "secondary.light" }} />;
 function TaxConsultation() {
   return (
     <Box>
+      <PageComingSoon label="Developer Note: Page completed. 3/16/22. Text analyzed and changed. Click and ignore. This is used for development purposes." />
       <TitleComp title="Free Tax Consultation" />
       <Box
         display={"flex"}
@@ -50,8 +55,7 @@ function TaxConsultation() {
             Qualify for tax relief in minutes!
           </Typography>
           <Typography variant="body">
-            {`  Your free consultation provides us with all the necessary information
-          we'll need to see if:`}
+            {`Your complimentary consultation supplies us with all the essential information we'll require to see if:`}
           </Typography>
           <Typography variant="body2">
             {checkmark}
@@ -64,10 +68,10 @@ function TaxConsultation() {
         </Box>
 
         <Typography gutterBottom variant="body">
-          Plus, you get the opportunity to talk to a tax expert and ask any
-          questions you may have regarding qualifying for tax relief. Our tax
-          consultation is non-obligational, and we offer it to everyone who
-          qualifies through our tax relief survey.
+          Plus, you earn the opportunity to converse with a tax professional and
+          ask any questions you may have concerning tax relief. Our tax
+          consultation is non-obligational, and we present it to everyone who
+          qualifies via our tax relief survey.
         </Typography>
 
         <SkeleBar />
@@ -84,35 +88,31 @@ function TaxConsultation() {
           </AccordionSummary>
           <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="body" gutterBottom>
-              TaxRise is one of the nation’s top tax relief companies – and the
-              fastest growing. Our innovative two-phase approach to tax relief,
-              paired with in-house developed software, helped us achieve this
-              status.
+              {`${companyName} is one of the country’s foremost tax relief companies – and the quickest developing. Our visionary two-phase method of tax relief helped us achieve this status.`}
             </Typography>
             <Typography variant="body" gutterBottom>
-              Our success would not be possible without the initial tax
-              consultation. We pre-qualify our clients from the beginning by
-              offering them realistic resolutions and giving them access to a
-              free tax consultant.
+              Our success would not be achievable without the initial tax
+              consultation. We pre-authorize our clients by suggesting practical
+              solutions and giving them access to a free tax consultant.
             </Typography>
             <Typography variant="body" gutterBottom>
-              The tax relief survey contains a few questions to help us evaluate
-              your financial situation. As soon as you complete the survey, it
-              is sent immediately to a Resolution Officer for review.
+              The tax relief survey comprises a few questions to assist us in
+              assessing your financial situation. As soon as you finish the
+              survey, it is sent instantly to a Resolution Officer for
+              consideration.
             </Typography>
             <Typography variant="body" gutterBottom>
-              Your Resolution Officer will review the information you provided
-              and, during our office hours, will call you to begin the tax
-              consultation.
+              Your Resolution Officer will examine your information and contact
+              you to initiate the tax consultation during office hours.
             </Typography>
             <Typography variant="body" gutterBottom>
-              Before you speak with a free tax consultant, try to have a rough
-              estimate of the amount the IRS claims you owe. Also, make sure to
-              confirm any unfiled tax years you might have.
+              Before you converse with a complimentary tax consultant, try to
+              calculate the amount the IRS asserts you owe. Furthermore, make
+              sure to confirm any unfiled tax years you might have.
             </Typography>
             <Typography variant="body" gutterBottom>
-              However, if you’re not sure how much you owe – no problem! We can
-              determine that information for you during the consultation.
+              However, no trouble if you’re not sure how much you owe! We can
+              resolve that information for you during the consultation.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -129,10 +129,11 @@ function TaxConsultation() {
           </AccordionSummary>
           <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="body" gutterBottom>
-              The free tax consultation phone call is the first step in your
-              journey to tax relief. During your consultation, a Resolution
-              Officer will take the time to learn more about your current tax
-              situation and verify if you qualify for the Fresh Start Program.
+              The complimentary tax consultation phone call is the first action
+              in your journey to tax relief. During your consultation, a
+              Resolution Officer will take the time to understand more regarding
+              your present tax situation and confirm if you qualify for one of
+              our packages.
             </Typography>
             <Typography variant="body" gutterBottom>
               These questions will include:
@@ -142,41 +143,44 @@ function TaxConsultation() {
               fontWeight={"bold"}
               gutterBottom
               display={"flex"}
+              gap={1}
             >
-              {checkmark}your current tax debt amount (and if it is state or
-              federal)
+              {checkmark}your current tax obligation amount (and if it is state
+              or federal)
             </Typography>
             <Typography
               variant="body"
               fontWeight={"bold"}
               gutterBottom
               display={"flex"}
+              gap={1}
             >
-              {checkmark}your monthly expenses and income
+              {checkmark}your monthly expenditures and earnings
             </Typography>
             <Typography
               variant="body"
               fontWeight={"bold"}
               gutterBottom
               display={"flex"}
+              gap={1}
             >
-              {checkmark}some basic information on any assets you may own (such
-              as a house or a car)
+              {checkmark}some primary information on any assets you may possess
+              (such as a house or a car)
             </Typography>
             <Typography variant="body" gutterBottom>
-              Your assigned Resolution Officer will be able to answer any
-              questions you may have regarding our process, the IRS, and tax
+              Your designated Resolution Officer will be competent to answer any
+              questions you may have concerning our strategy, the IRS, and tax
               relief.
             </Typography>
             <Typography variant="body" gutterBottom>
-              While some smaller companies offer free tax lawyer consultations,
-              our tax lawyers spend their entire day resolving tax debt with the
-              IRS. Most of their effort is dedicated to rigorous negotiation
-              with IRS examiners.
+              While some smaller corporations propose free tax counsel
+              consultations, our tax attorneys spend their whole day settling
+              tax obligations with the IRS. Most of their struggle is devoted to
+              relentless negotiation with IRS examiners.
             </Typography>
             <Typography variant="body" gutterBottom>
-              Your free tax consultation phone call will last approximately
-              thirty minutes and is broken up into three parts:
+              Your complimentary tax consultation phone call will last roughly
+              thirty minutes and is broken up into three components:
             </Typography>
             <Typography
               variant="body"
@@ -184,10 +188,11 @@ function TaxConsultation() {
               gutterBottom
               display={"flex"}
               justifyContent={"center"}
+              gap={1}
             >
-              {one}Your Situation— The Resolution Officer will give you the
-              opportunity to tell them how you ended up in tax debt, so that we
-              have the proper perspective moving forward.
+              {one}Your Situation— The Resolution Officer will let you tell them
+              how you ended up in tax debt so that we have an accurate
+              perspective moving forward.
             </Typography>
             <Typography
               variant="body"
@@ -195,9 +200,10 @@ function TaxConsultation() {
               gutterBottom
               display={"flex"}
               justifyContent={"center"}
+              gap={1}
             >
-              {two}The Interview — We ask our questions to determine if you
-              qualify for the Fresh Start Program.
+              {two}The Interview — We ask our questions to decide if you qualify
+              for our tax relief program.
             </Typography>
             <Typography
               variant="body"
@@ -205,24 +211,18 @@ function TaxConsultation() {
               gutterBottom
               display={"flex"}
               justifyContent={"center"}
+              gap={1}
             >
-              {three}Your Options — After we confirm whether you are a candidate
-              for tax relief, we will map out the most likely tax relief
-              scenarios and help you determine the next steps.
+              {three}Your Options — After we establish whether you are a
+              prospect for tax relief, we will map out the most plausible tax
+              relief scenarios and assist you in determining the next steps.
             </Typography>
             <Typography variant="body" gutterBottom>
-              TaxRise realizes that your time is valuable. Our objective is
-              always to be 100% upfront with you. If you don’t qualify, and our
-              services are not the best option for your financial situation, we
-              will tell you right away and help point you in the right
-              direction.
-            </Typography>
-            <Typography variant="body" gutterBottom>
-              TaxRise realizes that your time is valuable. Our objective is
-              always to be 100% upfront with you. If you don’t qualify, and our
-              services are not the best option for your financial situation, we
-              will tell you right away and help point you in the right
-              direction.
+              {companyName} acknowledges that your time is priceless. Our goal
+              is always to be transparent with you. If you don’t qualify, and
+              our assistance is not the most suitable choice for your financial
+              situation, we will inform you immediately and point you in the
+              right direction.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -239,51 +239,39 @@ function TaxConsultation() {
           </AccordionSummary>
           <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="body" gutterBottom>
-              If you qualify for the Fresh Start Program and choose to work with
-              us, we will use the following process:
+              If you qualify for our tax relief program and decide to work with
+              us, we will use the subsequent method:
             </Typography>
-            <Typography variant="body" gutterBottom display={"flex"}>
+            <Typography variant="body" gutterBottom display={"flex"} gap={1}>
               {checkmark}
               <Box>
                 <Box fontWeight={"bold"}>
-                  Discovery Phase, plus Analysis and Strategy:
-                </Box>{" "}
-                After your initial tax consultation, we will acquire all
-                necessary documents to prepare your case for the best resolution
-                possible. You will be assigned your very own TaxRise team, who
-                will review the findings and create a strategy for your case.
+                  Discovery Stage, plus Analysis and Strategy:
+                </Box>
+                {`After your initial tax consultation, we will receive all the essential documents to organize your claim for the most suitable solution imaginable. You will be designated your very own ${companyName} unit to inspect the results and create a method for your claim.`}
               </Box>
             </Typography>
-            <Typography variant="body" gutterBottom display={"flex"}>
+            <Typography variant="body" gutterBottom display={"flex"} gap={1}>
               {checkmark}
               <Box>
-                <Box fontWeight={"bold"}>Review and Advise:</Box> Before your
-                TaxRise team files paperwork for the resolution, we will meet
-                with you to share our findings and present our strategy for your
-                approval.
+                <Box fontWeight={"bold"}>Review and Advise:</Box>{" "}
+                {`Before your ${companyName} unit files paperwork for the solution, we will meet with you to communicate our findings and explain our strategy for your permission.`}
               </Box>
             </Typography>
-            <Typography variant="body" gutterBottom display={"flex"}>
+            <Typography variant="body" gutterBottom display={"flex"} gap={1}>
               {checkmark}
               <Box>
                 <Box fontWeight={"bold"}>
                   Presentation, Negotiation, and Submission:
-                </Box>{" "}
-                Once you approve of our plan, we will prepare your case
-                documents for presentation. Then, our experts will present your
-                case to the IRS (or State) and negotiate until we achieve the
-                best possible resolution. After your final approval of the
-                resolution, we will submit the case on your behalf.
+                </Box>
+                {`Once you consent to our strategy, we will organize your case papers for representation. Then, our specialists will deliver your claim to the IRS (or State) and negotiate until we reach the most acceptable possible solution. After your final approval of the resolution, we will present the claim on your behalf.`}
               </Box>
             </Typography>
-            <Typography variant="body" gutterBottom display={"flex"}>
+            <Typography variant="body" gutterBottom display={"flex"} gap={1}>
               {checkmark}
               <Box>
-                <Box fontWeight={"bold"}>Compliance:</Box> Unlike other
-                companies, TaxRise sets you up for success after our primary
-                services are complete. By working with you and offering you
-                tools to stay compliant, we’ll help you avoid accumulating tax
-                debt again.
+                <Box fontWeight={"bold"}>Compliance:</Box>
+                {`Unlike other companies, ${companyName} sets you up for victory after our preliminary services are finished. By operating with you and offering you mechanisms to stay compliant, we’ll help you evade accumulating tax debt again.`}
               </Box>
             </Typography>
             <Typography variant="body" gutterBottom>
@@ -305,29 +293,34 @@ function TaxConsultation() {
           </AccordionSummary>
           <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="body" gutterBottom>
-              TaxRise requires that our clients owe at least $5,000 in tax debt
-              and/or have unfiled back taxes. If you do not meet these criteria,
-              our services would most likely cost you more money than you would
-              end up saving.
+              {`${companyName} needs that our clients owe at least $5,000 in tax debt and/or have unfiled back taxes. If you do not satisfy these standards, our services would most likely cost you more money than you would save.`}
             </Typography>
             <Typography variant="body" gutterBottom>
-              TaxRise offers our tax consultation for free; that way, if you do
-              not qualify, you won’t have wasted your money looking for free tax
-              advice.
+              {`${companyName} delivers our tax consultation for free; that way, if you do not qualify, you won’t have wasted your cash looking for a complimentary tax recommendation.`}
             </Typography>
             <Typography variant="body" gutterBottom>
-              However, just because you don’t qualify doesn’t mean tax relief is
-              automatically off the table. You can still reach out to the IRS
-              and see what options are available to you.
+              {`Nevertheless, simply because you don’t qualify doesn’t mean tax relief is automatically off the table. You can still contact the IRS and see what options are available.`}
             </Typography>
             <Typography variant="body" gutterBottom>
-              Below are several resources you may find helpful on your journey
-              to tax relief:
+              Below are several resources you may find useful on your journey to
+              tax relief:
             </Typography>
-            <Typography variant="body" gutterBottom display={"flex"}>
+            <Typography
+              variant="body"
+              gutterBottom
+              display={"flex"}
+              gap={1}
+              alignItems={"center"}
+            >
               {checkmark}Contacting the IRS
             </Typography>
-            <Typography variant="body" gutterBottom display={"flex"}>
+            <Typography
+              variant="body"
+              gutterBottom
+              display={"flex"}
+              gap={1}
+              alignItems={"center"}
+            >
               {checkmark}Tax Relief Programs Information
             </Typography>
           </AccordionDetails>
@@ -340,31 +333,28 @@ function TaxConsultation() {
             id="panel1a-header"
           >
             <Typography variant="h6" component={"h2"}>
-              What is the IRS Fresh Start Program?
+              What is the Tax Relief Program?
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="body" gutterBottom>
-              As part of our free tax advice, your Resolution Officer will be
-              able to explain in detail what the Fresh Start Program is and how
-              we can help you navigate its complexities.
+              As part of our complimentary tax guidance, your Resolution Officer
+              will be capable of explaining in detail what our tax relief
+              program is and how we can assist you to navigate its intricacies.
             </Typography>
             <Typography variant="body" gutterBottom>
-              TaxRise offers tax relief for back taxes, unfiled tax years, and
-              various other tax issues and penalties through the Fresh Start
-              Program. With this program, we help our clients receive the best
-              resolution possible.
+              {`${companyName} offers tax relief for back taxes, unfiled tax years, and other tax issues and liabilities through the tax relief program. We help our clients obtain the most satisfactory resolution possible with this program.`}
             </Typography>
             <Typography variant="body" gutterBottom>
-              The Fresh Start Program provides tax relief to taxpayers who owe
+              The tax relief program delivers tax relief to taxpayers who owe
               more money than they will ever be able to repay to the IRS. Those
-              who qualify can significantly reduce their federal tax debt. Under
-              certain circumstances, they can achieve tax reductions of 90% or
-              more.
+              who qualify can immensely decrease their federal tax obligation.
+              Under certain occurrences, they can reach 90% or more tax
+              deductions.
             </Typography>
             <Typography variant="body" gutterBottom>
-              There are four main programs available to taxpayers through the
-              Fresh Start Program:
+              There are four main programs open to taxpayers through our tax
+              relief program:
             </Typography>
             <Typography variant="body" gutterBottom display={"flex"}>
               {one}Installment Agreement
@@ -379,7 +369,7 @@ function TaxConsultation() {
               {four}Penalty Abatement
             </Typography>
             <Typography variant="body" gutterBottom>
-              Read more about the Fresh Start Program to see what tax relief
+              Read more about the tax relief program to see what tax relief
               opportunities are available to taxpayers.
             </Typography>
           </AccordionDetails>
@@ -397,17 +387,16 @@ function TaxConsultation() {
           </AccordionSummary>
           <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="body" gutterBottom>
-              Not only does TaxRise provide tax relief services for personal and
-              business-related tax problems, but we also offer tax preparation.
+              {`Not only does ${companyName} supply tax relief assistance for personal and business-related tax issues, but we also offer tax preparation.`}{" "}
             </Typography>
             <Typography variant="body" gutterBottom>
-              Filing tax returns is a complex financial obligation that every
-              American must complete, but TaxRise can make filing your current
-              and past returns painless and stress-free.
+              {`Filing tax returns is a complicated financial responsibility that
+              every American must satisfy, but ${companyName} can complete filing your
+              current and past returns effortless and stress-free.`}
             </Typography>
             <Typography variant="body" gutterBottom>
-              Our CPAs will walk you through your tax return and help you
-              complete any other required IRS forms.
+              Our CPAs will walk you through your tax return and assist you in
+              completing any other mandatory IRS forms.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -419,35 +408,37 @@ function TaxConsultation() {
             id="panel1a-header"
           >
             <Typography variant="h6" component={"h2"}>
-              How Much Will TaxRise’s Services Cost?
+              {`How Much Will ${companyName}’s Services Cost?`}
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="body" gutterBottom>
-              If you qualify for our program, your Resolution Officer will
-              provide you with a quote for further services. Because each case
-              is unique and case complexity varies, we cannot provide you with a
-              quote until your free tax consultation.
+              Your Resolution Officer will supply you with further services if
+              you qualify for our program. Because each claim is unique and case
+              intricacy varies, we cannot give you a quote until your free tax
+              consultation.
             </Typography>
             <Typography variant="body" gutterBottom>
-              Your Resolution Officer will quote you an estimated cost of your
-              resolution during the initial tax consultation. However, we base
-              the total cost on the findings from our discovery analysis. Due to
-              this process, we attribute the fee that you paid for your
-              discovery analysis to your total resolution fee.
+              Your Resolution Officer will quote you an evaluated price of your
+              solution during the initial tax consultation. However, we base the
+              total expenditure on the results from our discovery analysis. Due
+              to this approach, we attribute the fee you paid for your discovery
+              analysis to your full-resolution payment.
             </Typography>
             <Typography variant="body" gutterBottom>
-              Costs must be determined on a case-by-case basis. The primary
-              factors considered in your total will be your tax liability
-              situation, as well as the chosen relief program. Similarly, we
-              understand that most of our clients are struggling financially,
-              and we can work with you to create the most suitable payment plan.
+              Costs are to be decided on a case-by-case basis. The primary
+              characteristics considered in your total will be your tax
+              liability situation and the selected relief program. Likewise, we
+              comprehend that most of our clients are struggling financially,
+              and we can work with you to create the most convenient payment
+              plan.
             </Typography>
             <Typography variant="body" gutterBottom>
-              Not everyone will be eligible for tax relief – that’s why our tax
-              consultation is free and non-obligational. We won’t force you to
-              use our service if you choose not to, and you will not be charged
-              a fee merely for speaking with one of our representatives.
+              Not everyone will be qualified for tax relief – that’s why our tax
+              consultation is complimentary and non-obligational. We won’t
+              compel you to use our service if you prefer not to, and you will
+              not be charged a fee simply for communicating with one of our
+              agents.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -464,57 +455,41 @@ function TaxConsultation() {
           </AccordionSummary>
           <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
             <Typography variant="body" gutterBottom>
-              TaxRise offers free tax consultation phone calls Monday through
-              Friday, from 9 AM to 6 PM PST. However, some taxpayers won’t be
+              {`${companyName} suggests free tax consultation phone calls Monday through
+              Friday, from ${openingHoursInfo.open} to ${openingHoursInfo.close} PST. However, some taxpayers won’t be
               able to find thirty minutes in their busy day, let alone thirty
-              minutes within our hours of operation. If you cannot complete your
+              minutes within our hours of operation. If you cannot conduct your
               free tax consultation over the phone, we have Resolution Officers
-              available to begin our process via email.
+              available to start our procedure through email.`}
             </Typography>
             <Typography variant="body" gutterBottom>
-              Your privacy is important to us; we recommend that you talk to a
-              tax expert over the phone due to the sensitive nature of the
-              information that we will discuss. For more information on this
-              subject, please read our privacy policy and terms and conditions.
+              Your privacy is paramount to us; we advise that you talk to a tax
+              specialist over the phone due to the sensitive nature of the
+              information that we will consult. Please read our privacy policy
+              and terms and conditions for more information on this subject.
             </Typography>
             <Typography variant="body" gutterBottom>
-              Nevertheless, we can make exceptions for certain circumstances.
-              Please let our Appointment Manager know which method of contact
-              you would prefer, and we will connect you with the appropriate
-              Resolution Officer for your tax consultation.
+              Nevertheless, we can make exceptions for particular cases. Please
+              let our Appointment Manager know which method of communication you
+              prefer, and we will connect you with the appropriate Resolution
+              Officer for your tax consultation.
             </Typography>
           </AccordionDetails>
         </Accordion>
 
-        {/* <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMore />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography variant="h6" component={"h2"}>
-            title
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
-          <Typography variant="body" gutterBottom>
-            comment
-          </Typography>
-        </AccordionDetails>
-      </Accordion> */}
         <SkeleBar />
 
         <Typography variant="h4" component={"h2"}>
           Complete Your Free Tax Consultation Today
         </Typography>
         <Typography variant="body">
-          Take the first step in your journey to tax relief. Contact{" "}
+          Take the first step in your journey to tax relief. Contact
           {companyName} today for a free tax consultation phone call.
         </Typography>
-        <Typography variant="body">
+        {/* <Typography variant="body">
           For more information and new 2022 tax relief updates, check out our
           tax blog or follow us on Facebook and Twitter!
-        </Typography>
+        </Typography> */}
         <SkeleBar />
       </Box>
       <TestimonialsComp title={"Testimonials"} />

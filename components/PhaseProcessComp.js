@@ -18,13 +18,13 @@ function PhaseProcessComp() {
       }}
     >
       <Typography variant="h3" component="h2" color="info.main">
-        2-Phase Quick Resolution Process
+        2-Stage Fast Resolution Process
       </Typography>
       <Phase
         number={1}
         title={"Discovery & Strategy"}
         paragraph={
-          "This preliminary phase starts with a free consultation to assess your financial situation. Then our team of certified professionals will analyze and prepare a resolution plan to present to the IRS on your behalf."
+          `This preparatory stage commences with a complimentary consultation to evaluate your financial situation. Then our crew of licensed experts will examine and formulate a solution plan to submit to the IRS on your behalf.`
         }
         timeFrame={"24 hrs - 1 month"}
       />
@@ -40,7 +40,7 @@ function PhaseProcessComp() {
         comp={"h3"}
         title={"Resolution"}
         paragraph={
-          "After IRS compliance has been established, we’ll bring you up to date on any and all tax returns. Next, your dedicated Case Manager and Tax Attorney will present your case to the IRS to achieve the best possible resolution. "
+          `After establishing IRS compliance, we’ll bring you up to date on any tax returns. Next, your dedicated Case Manager and Tax Attorney will submit your case to the IRS to acquire the best achievable resolution.`
         }
         timeFrame={"3-6 months"}
       />

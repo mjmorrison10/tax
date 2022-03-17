@@ -1,5 +1,5 @@
-import { StarRounded } from "@mui/icons-material";
-import { Box, Paper, Typography } from "@mui/material";
+import { Star, StarRounded } from "@mui/icons-material";
+import { Box, Paper, Rating, Typography } from "@mui/material";
 import React from "react";
 import ellipWords from "./ellipWords";
 
@@ -12,7 +12,7 @@ function Testimonial(props) {
   // const numb = props.numb;
   const { title, comment, name, starReview, date, numb, currentPage } = props;
 
-  const starArr = Array(starReview).fill(starReview);
+  // const starArr = Array(starReview).fill(starReview);
 
   if (currentPage == 1 && numb > 2) return null;
 
@@ -36,8 +36,9 @@ function Testimonial(props) {
         py: 1,
       }}
     >
-      <Typography variant="h5" component={"p"} fontWeight={"bold"}>
-        {ellipWords(title, 25)}
+      <Typography variant="h5" component={"p"} fontWeight={"bold"} noWrap>
+        {/* {ellipWords(title, 23)} */}
+        {title}
       </Typography>
       <Typography
         variant="body"
@@ -45,6 +46,7 @@ function Testimonial(props) {
         sx={{ textOverflow: "ellipsis" }}
       >
         {ellipWords(comment, 100)}
+        {/* {comment} */}
       </Typography>
       <Typography variant="subtitle1" fontWeight={"bold"}>
         {name}
@@ -52,23 +54,14 @@ function Testimonial(props) {
 
       <Box display={"flex"} gap={1} justifyContent={"space-between"}>
         <Typography variant="overline">{date}</Typography>
-        <Box display={"flex"} gap={0.5}>
-          {starArr.map((star, i) => (
-            <StarRounded
-              key={i}
-              color="info"
-              fontSize="small"
-              sx={{
-                backgroundColor: "primary.light",
-                h: "100%",
-                w: "100%",
-              }}
-            />
-          ))}
-        </Box>
+        <Rating
+          name="half-rating-read"
+          defaultValue={starReview}
+          precision={0.5}
+          readOnly
+          icon={<Star color="info" />}
+        />
       </Box>
-
-      {/* <StarRounded key={i} />; */}
     </Paper>
   );
 }

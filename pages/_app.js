@@ -52,29 +52,29 @@ function MyApp({ Component, pageProps }) {
             <Footer />
           </Box>
         </Container>
-        <Fab
-          color="info"
-          size="small"
-          onClick={() => {
-            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-          }}
-          sx={{
-            position: "sticky",
-            bottom: "1rem",
-            left: "1rem",
-            display: { xs: "none", sm: "flex" },
-          }}
-        >
-          <Tooltip
-            TransitionComponent={Fade}
-            TransitionProps={{ timeout: 600 }}
-            title="Scroll to Top"
-            placement="top-end"
+          <Fab
+            color="info"
+            size="small"
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
+            sx={{
+              position: "sticky",
+              bottom: "1rem",
+              left: "1rem",
+              display: { xs: "none", sm: "flex" },
+            }}
           >
-            <ArrowDropUp fontSize="large" />
-          </Tooltip>
-          {/* <Typography variant="button">Scroll to Top</Typography> */}
-        </Fab>
+            <Tooltip
+              TransitionComponent={Fade}
+              TransitionProps={{ timeout: 600 }}
+              title="Scroll to Top"
+              placement="top-end"
+            >
+              <ArrowDropUp fontSize="large" />
+            </Tooltip>
+            {/* <Typography variant="button">Scroll to Top</Typography> */}
+          </Fab>
       </Box>
     </ThemeProvider>
   );

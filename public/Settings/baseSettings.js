@@ -7,99 +7,75 @@ export const carouselHeight = "750px";
 
 export const testimonialsInfo = [
   {
-    name: "Alex",
+    name: "Lindsey Evans",
     title: "As panic as I was, I called and they helped!",
     comment:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem sed sit perspiciatis doloremque blanditiis aliquid! Ex aliquid possimus temporibus ipsa explicabo maiores.",
+      "Many years ago, my accountant recommended Tax Relief and I'm so grateful that he did! The IRS was about to seize my investments and any assets that I had, but with their help, I was able to stay compliant with the IRS. Now that I've been paying quarterly taxes for years, the IRS has finally let me be. Tax Relief is the best tax relief in",
     date: "3/11/2022",
     starReview: 5,
   },
   {
-    name: "Michael",
+    name: "Bernadette Crawford",
     title: "Amazing, fast, and understanding!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tenetur placeat sunt vitae impedit accusantium. Et facilis minus molestias qui dolor provident in deserunt laudantium.",
+
+    comment: `I had just about given up on my IRS problem when I found ${companyName}. Tax Relief helped me file for an extension, gave me a list of credits and deductions I had missed, and filed all the paperwork for me so that I could get my tax refund much faster. I can't recommend them enough!`,
     date: "3/10/2022",
-    starReview: 4,
+    starReview: 4.5,
   },
   {
-    name: "Becky",
+    name: "Iris Vasquez",
     title: "I couldn't understand the forms, they helped!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias porro iste maxime ratione fugiat officia quisquam illo sit eligendi iusto?",
+    comment: `I had been under a lot of stress with my taxes this year. I was referred to Tax Relief by a friend and they made it so easy. They addressed everything and communicated in a way that I could understand. I really appreciated the services they offered and it made me feel relief when the IRS backed off!`,
     date: "2/14/2022",
     starReview: 5,
   },
   {
-    name: "Alex2",
-    title: "As panic as I was, I called and they helped!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem sed sit perspiciatis doloremque blanditiis aliquid! Ex aliquid possimus temporibus ipsa explicabo maiores.",
-    date: "3/11/2022",
-    starReview: 5,
-  },
-  {
-    name: "Michael2",
-    title: "Amazing, fast, and understanding!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tenetur placeat sunt vitae impedit accusantium. Et facilis minus molestias qui dolor provident in deserunt laudantium.",
-    date: "3/10/2022",
-    starReview: 4,
-  },
-  {
-    name: "Becky2",
-    title: "I couldn't understand the forms, they helped!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias porro iste maxime ratione fugiat officia quisquam illo sit eligendi iusto?",
+    name: "Dixie Wade",
+    title: "Amazing job well done! Super quick!",
+    comment: `I can't thank ${companyName} enough for all that they did for me. I was really in a really tight spot. I owed so much money to the IRS and it looked like I was headed down a pretty dark path. They helped me get my debt down to an affordable payment and helped with all of my paperwork, too!`,
     date: "2/14/2022",
     starReview: 5,
   },
   {
-    name: "Alex3",
-    title: "As panic as I was, I called and they helped!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem sed sit perspiciatis doloremque blanditiis aliquid! Ex aliquid possimus temporibus ipsa explicabo maiores.",
-    date: "3/11/2022",
+    name: "Tony Mckenzie",
+    title: `I didn't know what to do, ${companyName} helped!`,
+    comment: `I don't know what I would do if I didn't have my Tax Relief to help with my tax debt. I was drowning in a sea of IRS bills and crippling interest rates, but Tax Relief swooped in and saved me from this nightmare. They are the best at what they do, and their company helped get me back on my feet. Thank you Tax Relief!`,
+    date: "1/15/2022",
+    starReview: 4.5,
+  },
+  {
+    name: "Alyssa Mann",
+    title: `${companyName}, thank you!`,
+    comment: `I was about to give up on my IRS problem when I contacted ${companyName}. Tax Relief. They gave me a list of deductions and credits I had missed, filed all the paperwork for me and even helped me file for an extension. This company is fantastic!`,
+    date: "3/13/2022",
     starReview: 5,
   },
   {
-    name: "Michael3",
+    name: "Louise Mcdonald",
+    title: `Troubling news from IRS! ${companyName} is awesome!`,
+    comment: `I was in trouble with the IRS. I owed them over $130,000 and I knew that I would be going to jail if I didn't make some drastic changes. A friend of mine told me about Name and it changed my life. ${companyName} took care of my debt and now everything is fine again!`,
+    date: "3/9/2022",
+    starReview: 5,
+  },
+  {
+    name: "Jody Hart",
     title: "Amazing, fast, and understanding!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tenetur placeat sunt vitae impedit accusantium. Et facilis minus molestias qui dolor provident in deserunt laudantium.",
-    date: "3/10/2022",
+    comment: `I can't thank ${companyName} enough for what they did for me. They saved me from the IRS and I am so glad that I found them. Overall, I would highly recommend them to anyone looking to get out of a tax debt agreement with the IRS.`,
+    date: "3/3/2022",
     starReview: 4,
   },
   {
-    name: "Becky3",
-    title: "I couldn't understand the forms, they helped!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias porro iste maxime ratione fugiat officia quisquam illo sit eligendi iusto?",
-    date: "2/14/2022",
+    name: "Austin Boyd",
+    title: `${companyName} is a life saver!`,
+    comment: `The ${companyName} saved me from the IRS. I had no idea how to deal with my tax return. I had been trying to do it myself for weeks but it was just making things worse and I was getting more and more frustrated. So just when I thought all hope was lost, this company swooped in and made everything go smoothly. They were so efficient, friendly, professional.`,
+    date: "2/20/2022",
     starReview: 5,
   },
   {
-    name: "Alex4",
-    title: "As panic as I was, I called and they helped!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem sed sit perspiciatis doloremque blanditiis aliquid! Ex aliquid possimus temporibus ipsa explicabo maiores.",
-    date: "3/11/2022",
-    starReview: 5,
-  },
-  {
-    name: "Michael4",
-    title: "Amazing, fast, and understanding!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tenetur placeat sunt vitae impedit accusantium. Et facilis minus molestias qui dolor provident in deserunt laudantium.",
-    date: "3/10/2022",
-    starReview: 4,
-  },
-  {
-    name: "Becky4",
-    title: "I couldn't understand the forms, they helped!",
-    comment:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias porro iste maxime ratione fugiat officia quisquam illo sit eligendi iusto?",
-    date: "2/14/2022",
+    name: "Jana Bridges",
+    title: "Huge debt! Relief!",
+    comment: `I had debt with the IRS and I was in trouble, but then my friend told me about ${companyName}, which took care of my debt. Now all is well again.`,
+    date: "3/2/2022",
     starReview: 5,
   },
 ];
@@ -762,3 +738,15 @@ export const taxPrepInfo = [
     paragraph: `You can gain all of our knowledge, skill, and resources by contacting TaxRise today or after taking our brief survey.`,
   },
 ];
+
+export const openingHoursInfo = {
+  open: "9 AM",
+  close: "6 PM",
+  sun: false,
+  mon: true,
+  tues: true,
+  wed: true,
+  thu: true,
+  fri: true,
+  sat: false,
+};

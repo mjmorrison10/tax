@@ -53,8 +53,8 @@ export default function Home(props) {
   return (
     <Box>
       <Carousel
-      fullHeightHover={true}
-      navButtonsAlwaysVisible={true}
+        fullHeightHover={true}
+        navButtonsAlwaysVisible={true}
         sx={{
           minHeight: { xs: "fit-content" },
         }}
@@ -73,7 +73,9 @@ export default function Home(props) {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Paper sx={{ p: 2, textAlign: "center", backgroundColor: 'primary.light' }}>
+        <Paper
+          sx={{ p: 2, textAlign: "center", backgroundColor: "primary.light" }}
+        >
           <Box
             display={"flex"}
             flexDirection={"column"}
@@ -84,7 +86,7 @@ export default function Home(props) {
             }}
           >
             <Typography variant="caption">
-              {`American's Best Tax Relief Company`}
+              {`American's Finest Tax Relief Business`}
             </Typography>
             <Typography variant="h4" component="p" fontWeight={"bold"}>
               {companyName}
@@ -138,11 +140,9 @@ export default function Home(props) {
             variant="body"
             color={"text.secondary"}
             // gutterBottom
-            sx={{
-            }}
+            sx={{}}
           >
-            {`Just answer a few short questions to find out if you're eligible to
-            have your tax debt reduced significantly or completely eliminated!`}
+            {`Just answer a few brief questions to determine if you're qualified to have your tax obligation decreased significantly or eliminated!`}
           </Typography>
         </Box>
         <Button
