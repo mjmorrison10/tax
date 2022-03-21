@@ -12,11 +12,20 @@ import camWords from "./camWords";
 import Link from "next/link";
 
 export default function SplitButton(props) {
+  const activeColor = props.activeColor
+  const inactiveColor = props.inactiveColor
+
   const [open, setOpen] = React.useState(false);
+  const [btnColor, setBtnColor] = React.useState(inactiveColor);
+
+
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   let text;
-  const color = props.btnColor;
+  const color = btnColor;
+
+  // const [btnColor, setBtnColor] = useState("info");
+
 
   // console.log(
   //   props.setBtnColor
@@ -33,7 +42,7 @@ export default function SplitButton(props) {
   // };
 
   const handleColorChange = () => {
-    !open ? props.setBtnColor("secondary") : props.setBtnColor("info");
+    !open ? setBtnColor(activeColor) : setBtnColor(inactiveColor);
   };
 
   const handleMenuItemClick = (event, index) => {
